@@ -1,11 +1,15 @@
-import NavBar from "../../components/NavBar"
+import { GridBackgroundDemo } from "../../components/GridBacground";
+import NavBar from "../../components/NavBar";
 
 function Hero() {
   return (
     <>
-      <NavBar />
+      <section className="hero-class">
+        <GridBackgroundDemo />
+        <NavBar />
+      </section>
     </>
-  )
+  );
 }
 
-export default Hero
+export default Hero;

@@ -2,10 +2,13 @@
 
 :root{
   background-color: #000319;
-  color:#ffffff
-  
+  @apply text-white;
 }
 
 .section-class{
   @apply h-screen flex justify-center items-center;
+}
+
+.hero-class{
+  @apply h-screen flex flex-col justify-center items-center
 }
