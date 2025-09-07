@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+:root{
+  background-color: #000319;
+  color:#ffffff
+  
+}
+
+.section-class{
+  @apply h-screen flex justify-center items-center;
+}
