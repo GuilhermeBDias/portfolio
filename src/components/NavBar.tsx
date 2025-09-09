@@ -1,15 +1,8 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { Animated } from "./AnimatedText";
 
 function NavBar() {
   const [active, setActive] = useState<string | null>("About");
-
-  const fadeInLeft = {
-    hidden: { opacity: 0, x: -50 },
-    visible: { opacity: 1, x: 0 },
-  };
-
   const links = ["About", "Projects", "Experience", "Contact"];
 
   return (
