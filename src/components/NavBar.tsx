@@ -1,12 +1,11 @@
 import { useState } from "react";
-import { Animated } from "./AnimatedText";
 
 function NavBar() {
   const [active, setActive] = useState<string | null>("About");
   const links = ["About", "Projects", "Experience", "Contact"];
 
   return (
-    <Animated as="div" delay={0.2}
+    <div 
       className="flex absolute justify-center top-0 h-[10%] mt-10 p-1 border-color rounded-2xl "
     >
       <nav className="flex w-full h-full justify-center items-center navbar-class px-8  ">
@@ -26,7 +25,7 @@ function NavBar() {
           ))}
         </ul>
       </nav>
-    </Animated>
+    </div>
   );
 }
 
