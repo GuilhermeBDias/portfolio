@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import type { AnimatedElementProps } from "../utils/Types";
+import type { AnimatedElementProps } from "./Types";
 
 const defaultVariants = {
   hidden: { opacity: 0, x: -60 },
@@ -25,8 +25,8 @@ export function Animated({
       variants={defaultVariants}
       initial="hidden"
       animate="visible"
-      transition={{ delay , duration }}
-      {...(href ? { href } : {})}
+      transition={{ delay, duration }}
+      href={href}
     >
       {children}
     </MotionTag>

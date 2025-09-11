@@ -1,3 +1,4 @@
+import About from './sections/hero/About'
 import Hero from './sections/hero/Hero'
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
   return (
     <>
       <Hero />
-      {/* <About /> */}
+      <About />
       {/* <Projects /> */}
       {/* <Experience /> */}
       {/* <Contact /> */}

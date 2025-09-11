@@ -2,18 +2,30 @@
 
 :root{
   background-color: #000319;
-  @apply text-white;
+  @apply text-white p-4;
 }
+
+::-webkit-scrollbar{
+  width: 0px;
+}
+
+/* Divs */
 
 .section-class{
-  @apply h-screen w-full flex justify-center items-center;
+  @apply h-[90vh] md:h-[84vh] w-full flex justify-center items-center   ;
 }
-
 
 .navbar-class{
   @apply rounded-2xl bg-gradient-to-r from-[#04071D] to-[#0C0E23]
 }
 
+
+/* colors */
+
 .border-color{
   @apply bg-gradient-to-br from-[#6971A2]  to-[#272A3C]
+}
+
+.color-gradient{
+  @apply bg-gradient-to-r from-[#161A31] to-[#06091F]
 }
