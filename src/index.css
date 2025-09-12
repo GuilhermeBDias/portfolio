@@ -11,14 +11,17 @@
 
 /* Divs */
 
+.hero-class{
+  @apply h-[90vh] w-full flex justify-center items-center ;
+}
+
 .section-class{
-  @apply h-[90vh] md:h-[84vh] w-full flex justify-center items-center   ;
+  @apply h-full w-full flex justify-center items-center ;
 }
 
 .navbar-class{
   @apply rounded-2xl bg-gradient-to-r from-[#04071D] to-[#0C0E23]
 }
-
 
 /* colors */
 
@@ -28,4 +31,24 @@
 
 .color-gradient{
   @apply bg-gradient-to-r from-[#161A31] to-[#06091F]
+}
+
+.text-secondary{
+  @apply text-[#E4ECFF]
+}
+
+.text-tertiary{
+  @apply text-[#C1C2D3] text-lg
+}
+
+/* Animations */
+
+@theme inline {
+  --animate-scroll-vertical: scroll-vertical var(--animation-duration, 25s) var(--animation-direction, forwards) linear infinite;
+ 
+  @keyframes scroll-vertical {
+    to {
+      transform: translateY(calc(-50% - 0.5rem));
+    }
+  }
 }

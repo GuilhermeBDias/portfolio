@@ -8,3 +8,27 @@ export interface AnimatedElementProps {
   as?: ElementType;
   href?: string;
 }
+
+export interface BentoGridProps {
+  className?: string;
+  children?: ReactNode;
+}
+
+export interface BentoGridItemProps {
+  className?: string;
+  title?: string | ReactNode;
+  subTitle?: string;
+  titleClass?: string;
+  background?: ReactNode;
+  children?: ReactNode;
+}
+
+export interface InfiniteCardsProps {
+  items: {
+    title: string;
+  }[];
+  direction?: "top" | "bottom";
+  speed?: "fast" | "normal" | "slow";
+  pauseOnHover?: boolean;
+  className?: string;
+}

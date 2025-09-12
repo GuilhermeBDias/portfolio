@@ -1,8 +1,7 @@
-import About from './sections/hero/About'
-import Hero from './sections/hero/Hero'
+import About from "./sections/About";
+import Hero from "./sections/Hero";
 
 function App() {
-
   return (
     <>
       <Hero />
@@ -11,7 +10,7 @@ function App() {
       {/* <Experience /> */}
       {/* <Contact /> */}
     </>
-  )
+  );
 }
 
-export default App
+export default App;

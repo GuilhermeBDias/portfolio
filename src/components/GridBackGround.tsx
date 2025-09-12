@@ -1,6 +1,6 @@
 import { cn } from "../utils/utils";
 
-export function GridBackgroundDemo() {
+export const GridBackgroundDemo = () => {
   return (
     <div className="absolute justify-center flex w-full h-full items-center inset-0 -z-10">
       <div

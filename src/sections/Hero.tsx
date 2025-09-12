@@ -1,21 +1,22 @@
-import { GridBackgroundDemo } from "../../components/GridBackGround";
-import LigthBackGround from "../../components/LigthBackGround";
-import NavBar from "../../components/NavBar";
-import { Animated } from "../../utils/AnimatedText";
+import { GridBackgroundDemo } from "../components/GridBackGround";
+import LigthBackGround from "../components/LigthBackGround";
+import { NavBar } from "../components/NavBar";
+import { Animated } from "../utils/AnimatedText";
+
 
 function Hero() {
   return (
     <>
-      <section className="section-class font-inter overflow-hidden">
+      <section className="hero-class overflow-hidden mb-6 md:mb-0">
         <GridBackgroundDemo />
         <LigthBackGround />
 
         <NavBar />
-        <div className="flex flex-col text-center w-full h-full justify-center items-center pt-16 sm:pt-0 gap-4">
+        <div className="flex flex-col text-center w-full h-full justify-center items-center pt-16 md:pt-0 gap-4">
           <Animated
             as="h1"
             delay={0.3}
-            className="text-lg md:text-xl text-[#E4ECFF] font-medium tracking-wider pb-4"
+            className="text-lg md:text-xl text-secondary font-medium tracking-wider pb-4"
           >
             Turning Ideas into Interactive Realities
           </Animated>
@@ -23,7 +24,7 @@ function Hero() {
             <Animated
               as="p"
               delay={0.5}
-              className="text-5xl sm:text-[92px]/20 font-bold"
+              className="text-5xl md:text-[92px]/20 font-bold"
             >
               Bridging the gap between design and
               <Animated
@@ -40,7 +41,7 @@ function Hero() {
             <Animated
               as="p"
               delay={0.9}
-              className="pt-4 text-[#E4ECFF] text-lg md:text-xl"
+              className="pt-4 text-secondary text-lg md:text-xl"
             >
               I'm Guilherme Dias — crafting modern web apps from Brazil.
             </Animated>
