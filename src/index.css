@@ -44,7 +44,7 @@
 /* Animations */
 
 @theme inline {
-  --animate-scroll-vertical: scroll-vertical var(--animation-duration, 25s) var(--animation-direction, forwards) linear infinite;
+  --animate-scroll-vertical: scroll-vertical var(--animation-duration, 20s) var(--animation-direction, forwards) linear infinite;
  
   @keyframes scroll-vertical {
     to {

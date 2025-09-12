@@ -16,6 +16,7 @@ export const BentoGrid = ({ className, children }: BentoGridProps) => {
 
 export const BentoGridItem = ({
   className,
+  divClass,
   title,
   subTitle,
   titleClass,
@@ -37,10 +38,10 @@ export const BentoGridItem = ({
           <div className="bg-[#000319]/50 h-full w-full"></div>
         </div>
       )}
-      <div className={cn("relative z-10 flex w-full h-full p-8")}>
-        <div className={cn("flex flex-col relative w-full h-full", titleClass)}>
-          {title && <h3 className={"text-4xl font-semibold"}>{title}</h3>}
-          {subTitle && <p className="text-lg text-tertiary">{subTitle}</p>}
+      <div className={cn("relative z-10 flex w-full h-full p-4", divClass)}>
+        <div className={cn("flex flex-col relative h-full z-10", titleClass)}>
+          {title && <h3 className="font-bold">{title}</h3>}
+          {subTitle && <p className="text-lg text-tertiary z-10">{subTitle}</p>}
         </div>
         {children}
       </div>

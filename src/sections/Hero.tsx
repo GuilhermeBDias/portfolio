@@ -24,7 +24,7 @@ function Hero() {
             <Animated
               as="p"
               delay={0.5}
-              className="text-5xl md:text-[92px]/20 font-bold"
+              className="text-5xl/13 md:text-[92px]/25 font-bold"
             >
               Bridging the gap between design and
               <Animated

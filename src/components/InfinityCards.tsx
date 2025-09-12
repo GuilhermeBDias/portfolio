@@ -48,18 +48,18 @@ export const InfiniteMovingCards = ({
   return (
     <div
       ref={containerRef}
-      className={cn("scroller relative z-20 max-w-7xl", className)}
+      className={cn("scroller relative z-20 max-w-xl", className)}
     >
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex flex-col w-max min-w-full shrink-0 flex-nowrap gap-4 py-4",
+          "flex flex-col min-w-full gap-4 ",
           start && "animate-scroll-vertical"
         )}
       >
         {items.map((item) => (
           <li
-            className="w-[350px] max-w-full flex justify-center rounded-2xl px-8 py-6 md:w-[150px] bg-[#10132E]"
+            className=" text-sm md:text-lg w-[90px] max-w-full flex justify-center rounded-2xl px-8 py-4 md:w-[150px] bg-[#10132E]"
             key={item.title}
           >
             {item.title}

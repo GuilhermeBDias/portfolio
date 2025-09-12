@@ -9,6 +9,12 @@ export interface AnimatedElementProps {
   href?: string;
 }
 
+export interface GridBackgroundProps {
+  GradientClassName?: string;
+  SquareClassName?: string;
+  children?: ReactNode;
+}
+
 export interface BentoGridProps {
   className?: string;
   children?: ReactNode;
@@ -16,6 +22,7 @@ export interface BentoGridProps {
 
 export interface BentoGridItemProps {
   className?: string;
+  divClass?: string;
   title?: string | ReactNode;
   subTitle?: string;
   titleClass?: string;
