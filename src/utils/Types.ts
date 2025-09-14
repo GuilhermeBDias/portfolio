@@ -28,6 +28,7 @@ export interface BentoGridItemProps {
   titleClass?: string;
   background?: ReactNode;
   children?: ReactNode;
+  viewport?: { once: boolean;  amount: number}
 }
 
 export interface InfiniteCardsProps {

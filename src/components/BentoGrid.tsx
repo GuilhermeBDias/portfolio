@@ -1,5 +1,6 @@
 import type { BentoGridItemProps, BentoGridProps } from "../utils/Types";
 import { cn } from "../utils/utils";
+import { motion } from "framer-motion";
 
 export const BentoGrid = ({ className, children }: BentoGridProps) => {
   return (
@@ -14,6 +15,11 @@ export const BentoGrid = ({ className, children }: BentoGridProps) => {
   );
 };
 
+const itemVariants = {
+  hidden: { opacity: 0, x: -60 },
+  visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+};
+
 export const BentoGridItem = ({
   className,
   divClass,
@@ -22,13 +28,18 @@ export const BentoGridItem = ({
   titleClass,
   background,
   children,
+  viewport,
 }: BentoGridItemProps) => {
   return (
-    <div
+    <motion.div
       className={cn(
         "relative rounded-2xl w-full border-2 border-[#272A3C] overflow-hidden",
         className
       )}
+      variants={itemVariants}
+      initial="hidden"
+      whileInView="visible"
+      viewport={ viewport || { once: true, amount: 0.5 }}
     >
       {background && (
         <div
@@ -39,12 +50,12 @@ export const BentoGridItem = ({
         </div>
       )}
       <div className={cn("relative z-10 flex w-full h-full", divClass)}>
-        <div className={cn("flex flex-col absolute h-full z-20", titleClass)}>
+        <div className={cn("flex flex-col h-full z-20", titleClass)}>
+          {subTitle && <p className="text-xs md:text-xl text-tertiary z-10">{subTitle}</p>}
           {title && <h3 className="font-bold">{title}</h3>}
-          {subTitle && <p className="text-lg text-tertiary z-10">{subTitle}</p>}
         </div>
         {children}
       </div>
-    </div>
+    </motion.div>
   );
 };

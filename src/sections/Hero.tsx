@@ -2,7 +2,7 @@ import { GridBackground } from "../components/GridBackGround";
 import LigthBackGround from "../components/LigthBackGround";
 import { NavBar } from "../components/NavBar";
 import { Animated } from "../utils/AnimatedText";
-
+import { GoArrowUpRight } from "react-icons/go";
 
 function Hero() {
   return (
@@ -37,7 +37,7 @@ function Hero() {
               </Animated>
             </Animated>
           </div>
-          <div className="w-full">
+          <div className="w-full flex flex-col items-center gap-2">
             <Animated
               as="p"
               delay={0.9}
@@ -50,9 +50,12 @@ function Hero() {
               as="a"
               delay={1.1}
               href="https://fonts.google.com/"
-              className="mt-4 inline-block w-full sm:w-auto color-gradient border-2 border-[#272A3C] text-white py-4 px-8 rounded-lg text-sm font-medium"
+              className="mt-4 flex w-full md:w-[240px] items-center justify-center gap-2 color-gradient border-2 border-[#272A3C] text-white py-4 px-8 rounded-lg text-sm md:text-xl font-medium md:hover:scale-105 transition-[scale]"
             >
-              View My Work
+              <div className="flex w-full justify-center items-center gap-2 ">
+                <p>View My Work</p>
+                <GoArrowUpRight size={26} />
+              </div>
             </Animated>
           </div>
         </div>
