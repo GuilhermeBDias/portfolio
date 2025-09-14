@@ -1,4 +1,4 @@
-import { GridBackgroundDemo } from "../components/GridBackGround";
+import { GridBackground } from "../components/GridBackGround";
 import LigthBackGround from "../components/LigthBackGround";
 import { NavBar } from "../components/NavBar";
 import { Animated } from "../utils/AnimatedText";
@@ -8,7 +8,7 @@ function Hero() {
   return (
     <>
       <section className="hero-class overflow-hidden mb-6 md:mb-0">
-        <GridBackgroundDemo />
+        <GridBackground />
         <LigthBackGround />
 
         <NavBar />

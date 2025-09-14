@@ -17,7 +17,7 @@ export function Animated({
   as: Tag = defaultTag,
   href,
 }: AnimatedElementProps) {
-  const MotionTag = motion(Tag);
+  const MotionTag = motion.create(Tag);
 
   return (
     <MotionTag

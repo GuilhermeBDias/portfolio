@@ -1,7 +1,7 @@
 import type { GridBackgroundProps } from "../utils/Types";
 import { cn } from "../utils/utils";
 
-export const GridBackgroundDemo = ({GradientClassName, SquareClassName, children}: GridBackgroundProps ) => {
+export const GridBackground = ({GradientClassName, SquareClassName, children}: GridBackgroundProps ) => {
   return (
     <div className="absolute justify-center flex w-full h-full items-center inset-0 -z-10">
       <div

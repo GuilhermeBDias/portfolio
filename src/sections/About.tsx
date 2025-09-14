@@ -1,7 +1,7 @@
 import { BentoGrid, BentoGridItem } from "../components/BentoGrid";
-import { GridBackgroundDemo } from "../components/GridBackGround";
+import { GridBackground } from "../components/GridBackGround";
 import { InfiniteMovingCards } from "../components/InfinityCards";
-import { Skeleton } from "../components/Skeleton";
+import { MiniCard } from "../components/MiniCard";
 import { testimonials } from "../constants";
 
 function About() {
@@ -15,17 +15,17 @@ function About() {
 
         <BentoGridItem
           title="I prioritize service quality and long-term collaboration with clients."
-          titleClass="flex w-[70%] md:w-[60%] justify-end text-2xl md:text-4xl md:p-2"
+          titleClass="flex relative w-[70%] md:w-[60%] justify-end text-2xl md:text-4xl md:p-2"
           background="../../Grid_01.jpg"
-          className="lg:col-span-11 row-span-7 lg:row-span-14"
+          className="lg:col-span-11 row-span-7 lg:row-span-14 p-4"
         ></BentoGridItem>
 
         {/* Grid 2 */}
 
         <BentoGridItem
           title="Brazil is home, but my workspace is wherever the internet reaches."
-          className="lg:col-span-9 row-span-5 lg:row-span-7"
-          titleClass="text-xl md:text-3xl"
+          className="lg:col-span-9 row-span-5 lg:row-span-7 "
+          titleClass="text-xl md:text-3xl p-4"
         >
           <div className="absolute top-[30%] md:top-[30%] left-1/2 -translate-x-1/2 -z-10 w-[600px] md:w-[900px] h-[800px]  invert rounded-full overflow-hidden ">
             <img
@@ -42,10 +42,10 @@ function About() {
         <BentoGridItem
           title="My Tech Stack"
           subTitle="I constantly try to improve"
-          titleClass="flex justify-center w-[60%] text-xl md:text-4xl"
+          titleClass="flex relative justify-center w-[60%] text-xl md:text-4xl pl-4"
           className="lg:col-span-9 row-span-5 lg:row-span-7"
         >
-          <div className="flex gap-1">
+          <div className="flex w-full justify-end gap-1">
             <InfiniteMovingCards items={testimonials} />
             <InfiniteMovingCards items={testimonials} direction="bottom" />
           </div>
@@ -53,30 +53,36 @@ function About() {
         </BentoGridItem>
       </BentoGrid>
 
-      <BentoGrid className="mt-6">
+      <BentoGrid className="mt-6 md:auto-rows-[18px]">
         {/* Grid 4 */}
 
         <BentoGridItem
-          title="Tech lover committed to continuous growth."
-          titleClass="text-xl md:text-3xl md:p-2 w-[80%] md:w-full  "
+          title="Building the future, one project at a time."
+          titleClass="text-xl md:text-3xl p-2 md:p-4 w-[90%] md:w-full "
           className="lg:col-span-6 row-span-4 lg:row-span-6 bg-[#04071D] flex flex-col"
           divClass="flex flex-col "
         >
-          <GridBackgroundDemo
-            GradientClassName="bg-radial from-transparent to-[#000319]"
+          <GridBackground
+            GradientClassName="bg-radial-[at_40%_55%] from-transparent to-[#000319]"
             SquareClassName="[background-size:40px_40px] md:[background-size:60px_60px]"
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#0C0E23]" />
-          </GridBackgroundDemo>
-          <Skeleton />
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent  to-[#0C0E23]" />
+          </GridBackground>
+          <MiniCard />
         </BentoGridItem>
 
         {/* Grid 5 */}
 
         <BentoGridItem
           title="Grid 5"
+          subTitle="The inside scoop"
           className="lg:col-span-14 row-span-4 lg:row-span-12"
-        ></BentoGridItem>
+        >
+          <GridBackground GradientClassName="bg-radial from-transparent to-[#000319]" SquareClassName="[background-size:50px_50px]">
+
+
+          </GridBackground>
+        </BentoGridItem>
 
         {/* Grid 6 */}
 
