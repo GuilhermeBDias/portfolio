@@ -30,7 +30,7 @@ function Hero() {
               <Animated
                 as="span"
                 delay={0.7}
-                className="bg-gradient-to-l  from-fuchsia-400 to-purple-700 bg-clip-text text-transparent "
+                className="text-gradient"
               >
                 {" "}
                 functionality.

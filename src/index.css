@@ -16,7 +16,7 @@
 }
 
 .section-class{
-  @apply min-h-screen w-full flex justify-center items-center ;
+  @apply h-full w-full flex justify-center items-center ;
 }
 
 .navbar-class{
@@ -39,6 +39,9 @@
 
 .text-tertiary{
   @apply text-[#C1C2D3]
+}
+.text-gradient{
+  @apply bg-gradient-to-l from-fuchsia-400 to-purple-700 bg-clip-text text-transparent
 }
 
 .backGround-gradient-1{
