@@ -12,7 +12,7 @@ export const BentoGrid = ({ className, children }: BentoGridProps) => {
     >
       {children}
     </div>
-  );
+  ); 
 };
 
 const itemVariants = {

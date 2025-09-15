@@ -1,16 +1,16 @@
-import React from "react";
+import type { CardProps } from "../utils/Types";
 
-export const Card = () => {
+export const Card = ({ title, description} : CardProps) => {
   return (
-    <div className="flex justify-center w-[40%] bg-[#04071D] border-1 rounded-3xl border-[#272A3C]">
-      <div className="flex flex-col w-full h-full p-8">
-        <div className="flex w-full h-full justify-center items-center p-8 rounded-2xl overflow-hidden bg-[#13162D]">
-          <img src="../../Grid_01.jpg" alt="" className=" w-100 h-80 rotate-4" />
-        </div>
-        <div>
-          <p>teste</p>
-        </div>
-        <div></div>
+    <div className="flex flex-col w-full h-full bg-[#04071D] p-4">
+      <div className="flex relative justify-center items-center overflow-hidden w-full h-[60%] bg-[#13162D] rounded-2xl">
+        <div className="absolute left-30 -top-20 w-[30%] h-[100%] rotate-45 rounded-full bg-radial-[at_40%_85%] from-cyan-600/80 via-gray-600/50 to-violet-800/90 blur-3xl" />
+        {/* imagem aqui */}
+      </div>
+      <h1 className="w-full p-2 md:p-4 text-xl md:text-3xl font-bold">{title}</h1>
+      <p className="w-full px-2 md:px-4 text-base md:text-xl text-[#BEC1DD]">{description}</p>
+      <div>
+
       </div>
     </div>
   );

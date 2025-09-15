@@ -40,3 +40,9 @@ export interface InfiniteCardsProps {
   pauseOnHover?: boolean;
   className?: string;
 }
+
+export interface CardProps {
+  title?: string;
+  description?: string;
+  imageSrc?: string;
+}

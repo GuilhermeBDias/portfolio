@@ -7,7 +7,7 @@ import { GoArrowUpRight } from "react-icons/go";
 function Hero() {
   return (
     <>
-      <section className="hero-class overflow-hidden mb-6 md:mb-0">
+      <section id="home" className="hero-class overflow-hidden mb-6 md:mb-0">
         <GridBackground />
         <LigthBackGround />
 

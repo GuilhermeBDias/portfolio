@@ -80,6 +80,7 @@ function About() {
           subTitle="Behind the scenes of my work"
           titleClass="justify-center p-4 w-[65%] md:w-[50%] text-xl md:text-4xl "
           className="hidden md:flex col-span-14 row-span-12"
+          viewport={{ once: true, amount: 0.3 }}
         >
           <GridBackground
             GradientClassName="bg-radial from-transparent to-[#000319]"
