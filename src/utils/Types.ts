@@ -41,8 +41,14 @@ export interface InfiniteCardsProps {
   className?: string;
 }
 
+export interface Tech {
+  id: number;
+  image: string;
+}
+
 export interface CardProps {
   title?: string;
   description?: string;
   imageSrc?: string;
+  techs?: Tech[];
 }
