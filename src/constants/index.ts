@@ -43,23 +43,23 @@ export const techs_1 = [
 export const techs_2 = [
   {
     id: 1,
-    image: "Grid_01.jpg",
+    image: "React_Logo.svg",
   },
   {
     id: 2,
-    image: "typescript.png",
+    image: "Postgres_Logo.svg",
   },
   {
     id: 3,
-    image: "javascript.png",
+    image: "Type_Logo.svg",
   },
   {
     id: 4,
-    image: "tailwindcss.png",
+    image: "Next_Logo.svg",
   },
   {
     id: 5,
-    image: "nextjs.png",
+    image: "Motion_Logo.svg",
   },
 ]
 
