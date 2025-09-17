@@ -108,3 +108,7 @@ export const techs_4 = [
     image: "nextjs.png",
   },
 ]
+
+export const TimelineData = [
+  { title: "Experience 1", content: "Description of experience 1" },{ title: "Experience 1", content: "Description of experience 1" },{ title: "Experience 1", content: "Description of experience 1" },{ title: "Experience 1", content: "Description of experience 1" },{ title: "Experience 1", content: "Description of experience 1" },{ title: "Experience 1", content: "Description of experience 1" },{ title: "Experience 1", content: "Description of experience 1" },
+]

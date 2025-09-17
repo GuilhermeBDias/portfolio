@@ -1,4 +1,5 @@
 import About from "./sections/About";
+import Experience from "./sections/Experience";
 import Hero from "./sections/Hero";
 import Projects from "./sections/Projects";
 
@@ -8,7 +9,9 @@ function App() {
       <Hero />
       <About />
       <Projects />
-      {/* <Experience /> */}
+      <Experience />
+      <Projects />
+
       {/* <Contact /> */}
     </>
   );

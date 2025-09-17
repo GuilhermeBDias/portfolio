@@ -14,7 +14,7 @@ function Projects() {
   return (
     <section id="projects" className="section-class flex-col lg:px-20 relative mb-10">
       <motion.p variants={itemVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.8 }} className="text-2xl md:text-5xl py-10 font-bold">
-        Recent works I'm <span className="text-gradient">proud to share</span>.
+        Recent works I'm <span className="text-gradient">proud to share</span>
       </motion.p>
       <BentoGrid className="grid-cols-2 lg:grid-cols-2 gap-14 ">
         <BentoGridItem className="col-span-2 lg:col-span-1 row-span-7 md:row-span-10 ">

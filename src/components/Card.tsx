@@ -20,7 +20,7 @@ export const Card = ({ title, description, techs = [] }: CardProps) => {
         {techs.map((tech) => (
           <div
             key={tech.id}
-            className="group w-[40px] h-[40px] md:w-[60px] md:h-[60px] justify-center items-center flex rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-r from-[#04071D] to-[#0C0E23] border-2 border-[#363749] -mr-2"
+            className=" w-[40px] h-[40px] md:w-[60px] md:h-[60px] justify-center items-center flex rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-r from-[#04071D] to-[#0C0E23] border-2 border-[#363749] -mr-2"
           >
             <img src={`../../${tech.image}`} alt="" className="object-cover p-2 md:p-3" />
           </div>
