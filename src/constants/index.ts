@@ -16,7 +16,6 @@ export const testimonials = [
   },
 ];
 
-
 export const techs_1 = [
   {
     id: 1,
@@ -38,7 +37,7 @@ export const techs_1 = [
     id: 5,
     image: "Motion_Logo.svg",
   },
-]
+];
 
 export const techs_2 = [
   {
@@ -61,7 +60,7 @@ export const techs_2 = [
     id: 5,
     image: "Motion_Logo.svg",
   },
-]
+];
 
 export const techs_3 = [
   {
@@ -84,7 +83,7 @@ export const techs_3 = [
     id: 5,
     image: "nextjs.png",
   },
-]
+];
 
 export const techs_4 = [
   {
@@ -107,8 +106,12 @@ export const techs_4 = [
     id: 5,
     image: "nextjs.png",
   },
-]
+];
 
-export const TimelineData = [
-  { title: "Experience 1", content: "Description of experience 1" },{ title: "Experience 1", content: "Description of experience 1" },{ title: "Experience 1", content: "Description of experience 1" },{ title: "Experience 1", content: "Description of experience 1" },{ title: "Experience 1", content: "Description of experience 1" },{ title: "Experience 1", content: "Description of experience 1" },{ title: "Experience 1", content: "Description of experience 1" },
+
+export const experience = [
+  { title: "Full-Stack developer trainee", description: "Assisted in the development of web applications using React, Node.js, and SQLServer.", image: "../../_Group_.svg" },
+  { title: "IT Support Intern", description: "Provided technical support and troubleshooting for hardware and software issues."},
+  { title: "Freelance Developer", description: "Developed and maintained websites for small businesses using HTML, CSS, and JavaScript."},
+  { title: "Freelance Web Developer", description: "Developed and maintained websites for small businesses using HTML, CSS, and JavaScript."},
 ]

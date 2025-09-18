@@ -46,7 +46,7 @@ export const BentoGridItem = ({
           className="flex absolute inset-0 w-full h-full bg-cover"
           style={{ backgroundImage: `url(${background})`, backgroundColor: "transparent" }}
         >
-          <div className="bg-[#000319]/50 h-full w-full"></div>
+          <div className="bg-[#000319]/60 h-full w-full"></div>
         </div>
       )}
       <div className={cn("relative z-10 flex w-full h-full", divClass)}>

@@ -18,7 +18,7 @@ function Projects() {
       </motion.p>
       <BentoGrid className="grid-cols-2 lg:grid-cols-2 gap-14 ">
         <BentoGridItem className="col-span-2 lg:col-span-1 row-span-7 md:row-span-10 ">
-          <Card title="CarHub for car enthusiasts - Website" description="A platform to share and discover car-related content." techs={techs_1} />
+          <Card title="CarHub for car enthusiasts - Website" description="A platform to share and discover car-related content." techs={techs_1} image="../../teste02.png"/>
         </BentoGridItem>
         <BentoGridItem className="col-span-2 lg:col-span-1 row-span-7 md:row-span-10 ">
           <Card title="Another Project Title" description="A brief description of another project." techs={techs_2} />

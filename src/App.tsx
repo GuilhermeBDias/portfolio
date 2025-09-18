@@ -10,8 +10,6 @@ function App() {
       <About />
       <Projects />
       <Experience />
-      <Projects />
-
       {/* <Contact /> */}
     </>
   );

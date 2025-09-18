@@ -1,12 +1,18 @@
 import { GoArrowUpRight } from "react-icons/go";
 import type { CardProps } from "../utils/Types";
 
-export const Card = ({ title, description, techs = [] }: CardProps) => {
+export const Card = ({ title, description, techs = [], image }: CardProps) => {
   return (
     <div className="flex flex-col w-full h-full bg-[#04071D] p-4">
       <div className="flex relative justify-center items-center overflow-hidden w-full h-[100%] bg-[#13162D] rounded-2xl">
-        <div className="absolute left-40 -top-20 w-[30%] h-full rotate-45 rounded-full bg-radial-[at_40%_85%] from-cyan-600/90 via-gray-600/70 to-violet-600/90 blur-3xl" />
-        {/* imagem aqui */}
+        <div
+          className="absolute left-20 md:left-40 -top-10 md:-top-20 w-[30%] h-full rotate-45 rounded-full bg-radial-[at_40%_85%] from-cyan-500/90 via-gray-500/60 to-violet-700 blur-3xl"
+        />
+        <img
+          src={image}
+          alt=""
+          className="absolute w-[40%] top-10 rotate-12 z-10  "
+        />
       </div>
       <div className="flex flex-col w-full items-center h-[60%]">
         <h1 className="w-full p-2 md:p-4 text-xl md:text-3xl font-bold">
@@ -22,7 +28,11 @@ export const Card = ({ title, description, techs = [] }: CardProps) => {
             key={tech.id}
             className=" w-[40px] h-[40px] md:w-[60px] md:h-[60px] justify-center items-center flex rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-r from-[#04071D] to-[#0C0E23] border-2 border-[#363749] -mr-2"
           >
-            <img src={`../../${tech.image}`} alt="" className="object-cover p-2 md:p-3" />
+            <img
+              src={`../../${tech.image}`}
+              alt=""
+              className="object-cover p-2 md:p-3"
+            />
           </div>
         ))}
         <div className="flex w-full justify-end items-center text-gradient font-bold ">
