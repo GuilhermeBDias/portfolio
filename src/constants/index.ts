@@ -16,97 +16,57 @@ export const testimonials = [
   },
 ];
 
-export const techs_1 = [
-  {
-    id: 1,
-    image: "React_Logo.svg",
-  },
-  {
-    id: 2,
-    image: "Tailwind_Logo.svg",
-  },
-  {
-    id: 3,
-    image: "Type_Logo.svg",
-  },
-  {
-    id: 4,
-    image: "Next_Logo.svg",
-  },
-  {
-    id: 5,
-    image: "Motion_Logo.svg",
-  },
-];
 
-export const techs_2 = [
+export const ProjectsData = [
   {
-    id: 1,
-    image: "React_Logo.svg",
+    title: "Patrimônio-DPDF Website",
+    description: "A platform to share and discover car-related content.",
+    image: "../../teste02.png",
+    techs: [
+      { id: 1, image: "React_Logo.svg" },
+      { id: 2, image: "Tailwind_Logo.svg" },
+      { id: 3, image: "Type_Logo.svg" },
+      { id: 4, image: "Next_Logo.svg" },
+      { id: 5, image: "Motion_Logo.svg" },
+    ]
   },
   {
-    id: 2,
-    image: "Postgres_Logo.svg",
+    title: "Another Project Title",
+    description: "A brief description of another project.",
+    image: "",
+    techs: [
+      { id: 1, image: "React_Logo.svg" },
+      { id: 2, image: "Postgres_Logo.svg" },
+      { id: 3, image: "Type_Logo.svg" },
+      { id: 4, image: "Next_Logo.svg" },
+      { id: 5, image: "Motion_Logo.svg" },
+    ]
   },
   {
-    id: 3,
-    image: "Type_Logo.svg",
+    title: "Yet Another Project Title",
+    description: "A brief description of yet another project.",
+    iamge: "",
+    techs: [
+      { id: 1, image: "react.png" },
+      { id: 2, image: "typescript.png" },
+      { id: 3, image: "javascript.png" },
+      { id: 4, image: "tailwindcss.png" },
+      { id: 5, image: "nextjs.png" },
+    ]
   },
   {
-    id: 4,
-    image: "Next_Logo.svg",
-  },
-  {
-    id: 5,
-    image: "Motion_Logo.svg",
-  },
-];
-
-export const techs_3 = [
-  {
-    id: 1,
-    image: "react.png",
-  },
-  {
-    id: 2,
-    image: "typescript.png",
-  },
-  {
-    id: 3,
-    image: "javascript.png",
-  },
-  {
-    id: 4,
-    image: "tailwindcss.png",
-  },
-  {
-    id: 5,
-    image: "nextjs.png",
-  },
-];
-
-export const techs_4 = [
-  {
-    id: 1,
-    image: "react.png",
-  },
-  {
-    id: 2,
-    image: "typescript.png",
-  },
-  {
-    id: 3,
-    image: "javascript.png",
-  },
-  {
-    id: 4,
-    image: "tailwindcss.png",
-  },
-  {
-    id: 5,
-    image: "nextjs.png",
-  },
-];
+    title: "Final Project Title",
+    description: "A brief description of the final project.",
+    image: "",
+    techs: [
+      { id: 1, image: "react.png" },
+      { id: 2, image: "typescript.png" },
+      { id: 3, image: "javascript.png" },
+      { id: 4, image: "tailwindcss.png" },
+      { id: 5, image: "nextjs.png" },
+    ]
+  }
+]
 
 
 export const experience = [
