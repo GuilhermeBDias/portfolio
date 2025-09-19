@@ -16,6 +16,7 @@ export function Animated({
   className = "",
   as: Tag = defaultTag,
   href,
+  viewport
 }: AnimatedElementProps) {
   const MotionTag = motion.create(Tag);
 
@@ -27,6 +28,7 @@ export function Animated({
       animate="visible"
       transition={{ delay, duration }}
       href={href}
+      viewport={ viewport || { once: true, amount: 0.8 }}
     >
       {children}
     </MotionTag>

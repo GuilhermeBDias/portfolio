@@ -49,7 +49,7 @@ function Hero() {
             <Animated
               as="a"
               delay={1.1}
-              href="https://fonts.google.com/"
+              href="https://github.com/GuilhermeBDias"
               className="mt-4 flex w-full md:w-[240px] items-center justify-center gap-2 color-gradient border-2 border-[#272A3C] text-white py-4 px-8 rounded-lg text-sm md:text-xl font-medium md:hover:scale-105 transition-[scale]"
             >
               <div className="flex w-full justify-center items-center gap-2 ">

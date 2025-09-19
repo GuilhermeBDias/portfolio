@@ -7,6 +7,7 @@ export interface AnimatedElementProps {
   className?: string;
   as?: ElementType;
   href?: string;
+  viewport?: { once: boolean;  amount: number}
 }
 
 export interface GridBackgroundProps {
