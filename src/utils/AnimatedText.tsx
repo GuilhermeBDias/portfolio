@@ -16,7 +16,7 @@ export function Animated({
   className = "",
   as: Tag = defaultTag,
   href,
-  viewport
+  viewport,
 }: AnimatedElementProps) {
   const MotionTag = motion.create(Tag);
 
@@ -28,9 +28,27 @@ export function Animated({
       animate="visible"
       transition={{ delay, duration }}
       href={href}
-      viewport={ viewport || { once: true, amount: 0.8 }}
+      viewport={viewport || { once: true, amount: 0.8 }}
     >
       {children}
     </MotionTag>
   );
 }
+
+export const containerVariants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.3,
+    },
+  },
+};
+
+export const itemVariants = {
+  hidden: { opacity: 0, x: -60 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1.0 },
+  },
+};

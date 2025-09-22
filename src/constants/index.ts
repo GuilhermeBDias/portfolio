@@ -21,7 +21,7 @@ export const ProjectsData = [
   {
     title: "Patrimônio-DPDF Website",
     description: "A platform to share and discover car-related content.",
-    image: "../../teste02.png",
+    image: "../../Image_patri.svg",
     techs: [
       { id: 1, image: "React_Logo.svg" },
       { id: 2, image: "Tailwind_Logo.svg" },
@@ -73,5 +73,5 @@ export const experience = [
   { title: "Full-Stack developer trainee", description: "Assisted in the development of web applications using React, Node.js, and SQLServer.", image: "../../Logo_Main_01.svg" },
   { title: "IT Support Intern", description: "Provided technical support and troubleshooting for hardware and software issues.", image: "../../Logo_Main_02.svg" },
   { title: "Freelance Developer", description: "Developed and maintained websites for small businesses using HTML, CSS, and JavaScript.", image: "../../Logo_Ex_03.svg" },
-  { title: "Freelance Web Developer", description: "Developed and maintained websites for small businesses using HTML, CSS, and JavaScript."},
+  { title: "Freelance Web Developer", description: "Developed and maintained websites for small businesses using HTML, CSS, and JavaScript.", image: "../../Logo_Ex_04.svg" },
 ]
