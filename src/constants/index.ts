@@ -20,7 +20,7 @@ export const testimonials = [
 export const ProjectsData = [
   {
     title: "Patrimônio-DPDF Website",
-    description: "A platform to share and discover car-related content.",
+    description: "Web tool for asset control and organization, utilizing QR Code and NFC scanning technology.",
     image: "../../Image_patri.svg",
     techs: [
       { id: 1, image: "React_Logo.svg" },

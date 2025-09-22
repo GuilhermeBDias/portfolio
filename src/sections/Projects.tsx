@@ -26,7 +26,7 @@ function Projects() {
       <BentoGrid className="grid-cols-2 lg:grid-cols-2 gap-14 ">
         {ProjectsData.map((project) => (
           <BentoGridItem
-            className="col-span-2 lg:col-span-1 row-span-7 md:row-span-10"
+            className="col-span-2 lg:col-span-1 row-span-6 md:row-span-9"
           >
             <Card title={project.title} description={project.description} image={project.image} techs={project.techs} />
           </BentoGridItem>

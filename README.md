@@ -28,3 +28,9 @@ O portfólio é composto pelas seguintes seções:
 
 ---
 
+## Design
+
+Este portfólio foi desenvolvido com base em um design criado por [Nome do Designer](link para o perfil ou projeto dela/no Figma).
+
+Agradeço pela inspiração e pela possibilidade de trabalhar com este layout.
+
