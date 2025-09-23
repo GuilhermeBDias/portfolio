@@ -30,7 +30,7 @@ O portfólio é composto pelas seguintes seções:
 
 ## Design
 
-Este portfólio foi desenvolvido com base em um design criado por [Nome do Designer](link para o perfil ou projeto dela/no Figma).
+Este portfólio foi desenvolvido com base em um design criado por [Renat Usmanov](https://www.figma.com/community/file/1388963046858584588/minimal-portfolio-for-web-developers).
 
 Agradeço pela inspiração e pela possibilidade de trabalhar com este layout.
 
