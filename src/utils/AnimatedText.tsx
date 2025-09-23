@@ -25,9 +25,9 @@ export function Animated({
       className={className}
       variants={defaultVariants}
       initial="hidden"
-      animate="visible"
       transition={{ delay, duration }}
       href={href}
+      whileInView="visible"
       viewport={viewport || { once: true, amount: 0.8 }}
     >
       {children}

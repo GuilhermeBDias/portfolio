@@ -51,7 +51,7 @@ export const BentoGridItem = ({
       )}
       <div className={cn("relative z-10 flex w-full h-full", divClass)}>
         <div className={cn("flex flex-col h-full z-20", titleClass)}>
-          {subTitle && <p className="text-xs md:text-xl text-tertiary z-10">{subTitle}</p>}
+          {subTitle && <p className="text-xs md:text-xl text-tertiary z-10 font-medium">{subTitle}</p>}
           {title && <h3 className="font-bold">{title}</h3>}
         </div>
         {children}

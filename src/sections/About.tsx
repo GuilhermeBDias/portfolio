@@ -9,7 +9,7 @@ function About() {
   return (
     <section
       id="about"
-      className="section-class flex-col lg:px-20 mb-10 relative"
+      className="section-class flex-col lg:px-40 mb-10 relative"
     >
       <BentoGrid>
         {/* Grid 1 */}
@@ -18,14 +18,14 @@ function About() {
           title="I prioritize service quality and long-term collaboration with clients."
           titleClass="flex relative w-[70%] md:w-[60%] justify-end text-2xl md:text-4xl md:p-2"
           background="../../Grid_01.jpg"
-          className="lg:col-span-11 row-span-7 lg:row-span-14 p-4"
+          className="lg:col-span-11 row-span-7 lg:row-span-12 p-4"
         />
 
         {/* Grid 2 */}
 
         <BentoGridItem
           title="Brazil is home, but my workspace is wherever the internet reaches."
-          className="lg:col-span-9 row-span-5 lg:row-span-7 overflow-hidden "
+          className="lg:col-span-9 row-span-5 lg:row-span-6 overflow-hidden "
           titleClass="text-xl md:text-3xl p-4"
           viewport={{ once: true, amount: 0.7 }}
         >
@@ -45,7 +45,7 @@ function About() {
           title="My Tech Stack"
           subTitle="I constantly try to improve"
           titleClass="flex relative justify-center w-[80%] text-xl md:text-4xl pl-4"
-          className="lg:col-span-9 row-span-5 lg:row-span-7"
+          className="lg:col-span-9 row-span-5 lg:row-span-6"
         >
           <div className="flex w-full justify-end gap-1 pr-2 md:pr-4">
             <InfiniteMovingCards items={testimonials} />
@@ -60,8 +60,8 @@ function About() {
 
         <BentoGridItem
           title="Building the future, one project at a time."
-          titleClass="text-xl md:text-3xl p-2 md:p-4 w-[90%] md:w-full "
-          className="lg:col-span-6 row-span-4 lg:row-span-6 bg-[#04071D] flex flex-col"
+          titleClass="text-xl md:text-2xl p-2 md:p-4 w-[90%] md:w-full "
+          className="lg:col-span-6 row-span-4 lg:row-span-5 bg-[#04071D] flex flex-col"
           divClass="flex flex-col "
         >
           <GridBackground
@@ -79,7 +79,7 @@ function About() {
           title="Building a modern car enthusiasts hub"
           subTitle="Behind the scenes of my work"
           titleClass="justify-center p-4 w-[65%] md:w-[50%] text-xl md:text-4xl "
-          className="hidden md:flex col-span-14 row-span-12"
+          className="hidden md:flex col-span-14 row-span-10"
           viewport={{ once: true, amount: 0.3 }}
         >
           <GridBackground
@@ -108,7 +108,7 @@ function About() {
           divClass="justify-center flex-col items-center"
           className="md:hidden  row-span-4 "
         >
-          <button className="flex justify-center gap-2 items-center w-[50%] h-[25%] border-1 border-[#313447] color-gradient rounded-xl">
+          <button className="flex justify-center gap-2 items-center py-2 px-3 border-1 border-[#313447] color-gradient rounded-xl">
             <GoCopy size={18} />
             Copy my e-mail
           </button>
@@ -122,10 +122,10 @@ function About() {
           title="Have an idea? Let's make it real."
           titleClass="justify-center items-center pb-4 w-[80%] text-center text-3xl  h-auto "
           divClass="justify-center flex-col items-center"
-          className="hidden md:flex  col-span-6 row-span-6"
+          className="hidden md:flex  col-span-6 row-span-5"
           viewport={{ once: true, amount: 0.05 }}
         >
-          <button className="flex justify-center items-center w-[50%] h-[20%] gap-2 color-gradient rounded-xl border-1 border-[#313447] hover:scale-105 transition-[scale] ">
+          <button className="flex justify-center items-center p-2 gap-2 color-gradient rounded-xl border-1 border-[#313447] hover:scale-105 transition-[scale] ">
             <GoCopy size={20} />
             Copy my e-mail
           </button>
