@@ -8,20 +8,7 @@ function Contact() {
   const [isModalOpen, setModalOpen] = useState(false);
 
   return (
-    <>
-      <ContactContent onOpenModal={() => setModalOpen(true)} />
-      <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
-    </>
-  );
-}
-
-type ContactContentProps = {
-  onOpenModal: () => void;
-};
-
-const ContactContent = ({ onOpenModal }: ContactContentProps) => {
-  return (
-    <section id="contact" className="section-class relative">
+      <section id="contact" className="section-class relative">
       <GridBackground GradientClassName="bg-radial from-transparent to-[#000319]" />
       <motion.div
         variants={containerVariants}
@@ -39,7 +26,7 @@ const ContactContent = ({ onOpenModal }: ContactContentProps) => {
         </motion.h2>
         <motion.div variants={itemVariants} className="w-full md:w-[20%]">
           <button
-            onClick={onOpenModal}
+            onClick={() => setModalOpen(true)}
             type="button"
             className="w-full h-[60px] border-1 border-[#272A3C] color-gradient rounded-xl text-lg md:text-xl hover:scale-105 transition-[scale]"
           >
@@ -47,10 +34,10 @@ const ContactContent = ({ onOpenModal }: ContactContentProps) => {
           </button>
         </motion.div>
       </motion.div>
+
+      <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
     </section>
   );
-};
+}
 
 export default Contact;
-
-// <Modal isOpen={isModalOpen} onClose={() => setModalOpen(false)} />
