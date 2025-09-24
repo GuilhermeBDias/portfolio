@@ -24,35 +24,60 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
           transition={{ duration: 0.5 }}
         >
           <motion.form
-            className="flex flex-col w-[90%] md:w-[25%] relative bg-[#13162D] p-4 rounded-xl h-[50vh] border-2 border-white overflow-hidden "
+            className="flex flex-col w-[90%] md:w-[25%] relative bg-[#000319] p-4 rounded-xl h-[55vh] border-3 border-[#272A3C] overflow-hidden z-30 "
             onClick={(e) => e.stopPropagation()}
+            onSubmit={(e) => {
+              e.preventDefault();
+            }}
             variants={modalVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
             transition={{ duration: 0.5 }}
           >
-          <div className="absolute w-full h-full" />
-            <div className="flex w-full justify-between items-center">
-              <h1 className="text-black">Let's Talk</h1>
-              <button
-                onClick={onClose}
-                type="button"
-                className=" text-black text-2xl cursor-pointer"
-              >
-                x
-              </button>
-            </div>
-            <div className="flex flex-col gap-4 w-full h-full">
-              <input
-                type="email"
-                className="border border-gray-300 bg-slate-300 p-2 rounded-md w-full"
-              />
-              <textarea
-                name=""
-                id=""
-                className="border border-gray-300 p-2 rounded-md w-full h-[40%] resize-none"
-              ></textarea>
+            <div className="absolute top-20  rotate-45 w-full h-[60%] modal-gradient" />
+            <div className="flex flex-col w-full h-full z-20 gap-6">
+              <div className="flex w-full justify-between  items-center">
+                <h1 className="text-white h-full text-3xl font-bold">
+                  Let's Talk
+                </h1>
+                <button type="button" onClick={onClose} className=" text-white text-2xl font-semibold hover:scale-110 transition-[scale]">
+                  x
+                </button>
+              </div>
+              <div className="flex flex-col gap-4 w-full h-full">
+                <div className="flex flex-col ">
+                  <label className="pl-2" htmlFor="name"> Name: </label>
+                  <input
+                    placeholder="Guilherme"
+                    type="email"
+                    className="border-2 border-[#272A3C] bg-[#04071D] p-2 rounded-md w-full text-white outline-none"
+                  />
+                </div>
+                <div className="flex flex-col ">
+                  <label className="pl-2" htmlFor="email"> Email: </label>
+                  <input
+                    placeholder="Guilherme@example.com"
+                    type="email"
+                    className="border-2 border-[#272A3C] bg-[#04071D] p-2 rounded-md w-full text-white outline-none"
+                  />
+                </div>
+                <div className="flex flex-col h-full">
+                  <label className="pl-2" htmlFor="message">Message:</label>
+                  <textarea
+                    placeholder="Your message..."
+                    name=""
+                    id=""
+                    className="border-2 border-[#272A3C] bg-[#04071D] p-2 rounded-md w-full h-[80%] resize-none outline-none"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  className="flex justify-center p-2 w-full color-gradient border-2 border-[#272A3C] cursor-pointer rounded-xl hover:scale-102 transition"
+                >
+                  Submit
+                </button>
+              </div>
             </div>
           </motion.form>
         </motion.div>
