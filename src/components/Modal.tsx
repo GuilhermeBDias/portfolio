@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from "motion/react";
-import { useState, type HtmlHTMLAttributes } from "react";
+import { useState } from "react";
 import emailjs from "@emailjs/browser";
 
 interface ModalProps {
@@ -38,20 +38,22 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
     try {
       console.log("Form Submitted", formData);
 
-      await emailjs.send("service_69ifd7q", "template_qqr944h", {
-        from_name: formData.name,
-        to_name: "Guilherme",
-        from_email: formData.email,
-        to_email: "guilhermebdias55@gmail.com",
-        message: formData.message,
-      },
+      await emailjs.send(
+        "service_69ifd7q",
+        "template_qqr944h",
+        {
+          from_name: formData.name,
+          to_name: "Guilherme",
+          from_email: formData.email,
+          to_email: "guilhermebdias55@gmail.com",
+          message: formData.message,
+        },
         "JiReFfyqc9PjoW_qW"
       );
       setIsLoading(false);
       alert("Success! I will get back to you as soon as possible.");
 
-      setFormData({ name: "", email: "", message: "" })
-      
+      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
       setIsLoading(false);
       console.error("Error sending email:", error);
@@ -85,14 +87,17 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
           >
             <div className="absolute top-20  rotate-45 w-full h-[60%] modal-gradient" />
             <div className="flex flex-col w-full h-full z-20 gap-6">
-              <div className="flex w-full justify-between  items-center">
-                <h1 className="text-white h-full text-3xl font-bold">
-                  Let's Talk
-                </h1>
+              <div className="flex w-full justify-between  items-start">
+                <div className="flex flex-col w-full pl-2">
+                  <h1 className="text-white h-full text-3xl font-bold">
+                    Let's Talk
+                  </h1>
+                  <p className="text-tertiary font-semibold">Drop me a message and let's start building your idea.</p>
+                </div>
                 <button
                   type="button"
                   onClick={onClose}
-                  className=" text-white text-2xl font-semibold hover:scale-110 transition-[scale]"
+                  className=" text-white text-2xl font-semibold hover:scale-110 transition-[scale] "
                 >
                   x
                 </button>
