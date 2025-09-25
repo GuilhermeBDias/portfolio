@@ -1,7 +1,6 @@
-import { GoArrowUpRight } from "react-icons/go";
 import type { CardProps } from "../utils/Types";
 import { motion } from "framer-motion";
-import { containerVariants, itemVariants } from "../utils/AnimatedText";
+import { containerVariants, itemVariants } from "../constants/animations";
 
 export const Card = ({ title, description, techs = [], image }: CardProps) => {
   return (
@@ -50,10 +49,7 @@ export const Card = ({ title, description, techs = [], image }: CardProps) => {
           </motion.div>
         ))}
         <div className="flex w-full justify-end items-center text-gradient font-bold ">
-          <a className="flex w-full justify-end items-center" href="">
-            Check the site{" "}
-            <GoArrowUpRight size={20} className="text-purple-700" />
-          </a>
+          
         </div>
       </motion.div>
     </motion.div>

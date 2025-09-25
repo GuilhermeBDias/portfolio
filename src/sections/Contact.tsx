@@ -2,7 +2,7 @@ import { useState } from "react";
 import { GridBackground } from "../components/GridBackGround";
 import { Modal } from "../components/Modal";
 import { motion } from "framer-motion";
-import { containerVariants, itemVariants } from "../utils/AnimatedText";
+import { containerVariants, itemVariants } from "../constants/animations";
 
 function Contact() {
   const [isModalOpen, setModalOpen] = useState(false);

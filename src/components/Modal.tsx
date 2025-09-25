@@ -1,4 +1,6 @@
 import { AnimatePresence, motion } from "motion/react";
+import { useState, type HtmlHTMLAttributes } from "react";
+import emailjs from "@emailjs/browser";
 
 interface ModalProps {
   isOpen: boolean;
@@ -12,6 +14,51 @@ const modalVariants = {
 };
 
 export const Modal = ({ isOpen, onClose }: ModalProps) => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleChanger = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setIsLoading(true);
+
+    try {
+      console.log("Form Submitted", formData);
+
+      await emailjs.send("service_69ifd7q", "template_qqr944h", {
+        from_name: formData.name,
+        to_name: "Guilherme",
+        from_email: formData.email,
+        to_email: "guilhermebdias55@gmail.com",
+        message: formData.message,
+      },
+        "JiReFfyqc9PjoW_qW"
+      );
+      setIsLoading(false);
+      alert("Success! I will get back to you as soon as possible.");
+
+      setFormData({ name: "", email: "", message: "" })
+      
+    } catch (error) {
+      setIsLoading(false);
+      console.error("Error sending email:", error);
+      alert("Something went wrong. Please try again.");
+    }
+  };
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -28,6 +75,7 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
             onClick={(e) => e.stopPropagation()}
             onSubmit={(e) => {
               e.preventDefault();
+              handleSubmit(e);
             }}
             variants={modalVariants}
             initial="hidden"
@@ -41,33 +89,55 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
                 <h1 className="text-white h-full text-3xl font-bold">
                   Let's Talk
                 </h1>
-                <button type="button" onClick={onClose} className=" text-white text-2xl font-semibold hover:scale-110 transition-[scale]">
+                <button
+                  type="button"
+                  onClick={onClose}
+                  className=" text-white text-2xl font-semibold hover:scale-110 transition-[scale]"
+                >
                   x
                 </button>
               </div>
               <div className="flex flex-col gap-4 w-full h-full">
                 <div className="flex flex-col ">
-                  <label className="pl-2" htmlFor="name"> Name: </label>
+                  <label className="pl-2" htmlFor="name">
+                    {" "}
+                    Name:{" "}
+                  </label>
                   <input
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChanger}
                     placeholder="Guilherme"
-                    type="email"
+                    type="text"
                     className="border-2 border-[#272A3C] bg-[#04071D] p-2 rounded-md w-full text-white outline-none"
                   />
                 </div>
                 <div className="flex flex-col ">
-                  <label className="pl-2" htmlFor="email"> Email: </label>
+                  <label className="pl-2" htmlFor="email">
+                    {" "}
+                    Email:{" "}
+                  </label>
                   <input
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChanger}
                     placeholder="Guilherme@example.com"
                     type="email"
                     className="border-2 border-[#272A3C] bg-[#04071D] p-2 rounded-md w-full text-white outline-none"
                   />
                 </div>
                 <div className="flex flex-col h-full">
-                  <label className="pl-2" htmlFor="message">Message:</label>
+                  <label className="pl-2" htmlFor="message">
+                    Message:
+                  </label>
                   <textarea
                     placeholder="Your message..."
-                    name=""
-                    id=""
+                    name="message"
+                    id="message"
+                    value={formData.message}
+                    onChange={handleChanger}
                     className="border-2 border-[#272A3C] bg-[#04071D] p-2 rounded-md w-full h-[80%] resize-none outline-none"
                   ></textarea>
                 </div>
@@ -75,7 +145,7 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
                   type="submit"
                   className="flex justify-center p-2 w-full color-gradient border-2 border-[#272A3C] cursor-pointer rounded-xl hover:scale-102 transition"
                 >
-                  Submit
+                  {isLoading ? "Sending..." : "Send"}
                 </button>
               </div>
             </div>

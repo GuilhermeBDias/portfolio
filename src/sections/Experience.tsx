@@ -1,7 +1,7 @@
 import { BentoGrid, BentoGridItem } from "../components/BentoGrid";
 import { experience } from "../constants";
 import { motion } from "framer-motion";
-import { containerVariants, itemVariants } from "../utils/AnimatedText";
+import { containerVariants, itemVariants } from "../constants/animations";
 
 function Experience() {
 

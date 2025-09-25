@@ -1,11 +1,23 @@
+import { useState } from "react";
 import { BentoGrid, BentoGridItem } from "../components/BentoGrid";
 import { GridBackground } from "../components/GridBackGround";
 import { InfiniteMovingCards } from "../components/InfinityCards";
 import { MiniCard } from "../components/MiniCard";
 import { testimonials } from "../constants";
-import { GoCopy } from "react-icons/go";
+import { TbCopy, TbCopyCheck } from "react-icons/tb";
 
 function About() {
+
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyEmail = () => {
+    navigator.clipboard.writeText("guilhermebdias55@gmail.com")
+    setCopied(true);
+
+    setTimeout(() => {
+      setCopied(false);
+    }, 2000);
+  }
   return (
     <section
       id="about"
@@ -108,9 +120,13 @@ function About() {
           divClass="justify-center flex-col items-center"
           className="md:hidden  row-span-4 "
         >
-          <button className="flex justify-center gap-2 items-center py-2 px-3 border-1 border-[#313447] color-gradient rounded-xl">
-            <GoCopy size={18} />
-            Copy my e-mail
+          <button className="flex justify-center w-[60%] gap-2 items-center py-2 px-3 border-1 border-[#313447] color-gradient rounded-xl" onClick={handleCopyEmail}>
+            {copied ? ( <span className="flex w-full justify-center items-center gap-2"><TbCopyCheck size={18}/>Email copied!</span>) : (
+              <>
+                <TbCopy size={18} />
+                Copy my e-mail
+              </>
+            )}
           </button>
           <div className="absolute left-[-20%] bottom-[-10%] w-[70%] h-[60%] backGround-gradient-1" />
           <div className="absolute rotate-45 left-[0%] bottom-[10%] w-[40%] h-[40%] backGround-gradient-2"/>
@@ -125,9 +141,16 @@ function About() {
           className="hidden md:flex  col-span-6 row-span-5"
           viewport={{ once: true, amount: 0.05 }}
         >
-          <button className="flex justify-center items-center p-2 gap-2 color-gradient rounded-xl border-1 border-[#313447] hover:scale-105 transition-[scale] ">
-            <GoCopy size={20} />
-            Copy my e-mail
+          <button className="flex justify-center items-center p-2 gap-2 color-gradient rounded-xl border-1 border-[#313447] hover:scale-105 transition-[scale] " onClick={(e) => {
+            e.preventDefault();
+            handleCopyEmail();
+          }}>
+             {copied ? ( <span className="flex justify-center items-center gap-2 w-full"><TbCopyCheck size={18}/>Email copied!</span>) : (
+              <>
+                <TbCopy size={18} />
+                Copy my e-mail
+              </>
+            )}
           </button>
           <div className="absolute left-[-10%] bottom-[-10%] w-[60%] h-[70%] backGround-gradient-1" />
           <div className="absolute rotate-45 left-[10%] bottom-[20%] w-[40%] h-[50%] backGround-gradient-2"/>
