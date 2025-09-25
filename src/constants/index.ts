@@ -1,3 +1,6 @@
+import type { IconType } from "react-icons";
+import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
+
 export const testimonials = [
   {
     title: "React",
@@ -75,3 +78,15 @@ export const experience = [
   { title: "Freelance Developer", description: "Developed and maintained websites for small businesses using HTML, CSS, and JavaScript.", image: "../../Logo_Ex_03.svg" },
   { title: "Freelance Web Developer", description: "Developed and maintained websites for small businesses using HTML, CSS, and JavaScript.", image: "../../Logo_Ex_04.svg" },
 ]
+
+
+type SocialLink = {
+  link: string;
+  icon: IconType;
+};
+
+export const socialLinks: SocialLink[] = [
+  { link: "https://www.linkedin.com/in/guilherme-barbosa-dias-8532b6302/", icon: FaLinkedin },
+  { link: "https://github.com/GuilhermeBDias", icon: FaGithub },
+  { link: "https://wa.me/5561996911079", icon: FaWhatsapp }
+];
