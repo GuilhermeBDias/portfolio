@@ -8,7 +8,7 @@ function Hero() {
   return (
     <>
       <LigthBackGround>
-        <section id="home" className="hero-class overflow-hidden mb-6 md:mb-0 ">
+        <section id="home" className="hero-class overflow-hidden mb-6 md:mb-0 z-10">
           <GridBackground />
 
           <NavBar />

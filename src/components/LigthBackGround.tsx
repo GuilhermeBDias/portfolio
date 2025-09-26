@@ -15,7 +15,7 @@ export const LigthBackGround = ({
   return (
     <div
       className={cn(
-        "bg-transparent  relative md:flex h-[90vh] w-full flex-col items-center justify-center  ",
+        "bg-transparent relative md:flex h-[90vh] w-full flex-col items-center justify-center  ",
         className
       )}
       {...props}

@@ -30,14 +30,14 @@ function About() {
           title="I prioritize service quality and long-term collaboration with clients."
           titleClass="flex relative w-[70%] justify-end text-2xl md:text-3xl md:p-2"
           background="../../Grid_01.jpg"
-          className="lg:col-span-11 row-span-7 lg:row-span-10 p-4"
+          className="lg:col-span-11 row-span-7 lg:row-span-12 p-4"
         />
 
         {/* Grid 2 */}
 
         <BentoGridItem
           title="Brazil is home, but my workspace is wherever the internet reaches."
-          className="lg:col-span-9 row-span-5 lg:row-span-5 overflow-hidden "
+          className="lg:col-span-9 row-span-5 lg:row-span-6 overflow-hidden "
           titleClass="text-xl md:text-3xl p-4"
           viewport={{ once: true, amount: 0.7 }}
         >
@@ -57,7 +57,7 @@ function About() {
           title="My Tech Stack"
           subTitle="I constantly try to improve"
           titleClass="flex relative justify-center w-[80%] text-xl md:text-2xl pl-4"
-          className="lg:col-span-9 row-span-5 lg:row-span-5"
+          className="lg:col-span-9 row-span-5 lg:row-span-6"
         >
           <div className="flex w-full justify-end gap-1 pr-2 md:pr-4">
             <InfiniteMovingCards items={testimonials} />
