@@ -9,7 +9,7 @@ function Hero() {
       <LigthBackGround>
           <GridBackground />
         <section id="home" className="hero-class overflow-hidden mb-6 md:mb-0 z-10">
-          <div className="flex flex-col text-center w-full h-full justify-center items-center pt-16 md:pt-0 gap-4">
+          <div className="flex flex-col text-center w-full h-full justify-center items-center pt-16 md:pt-20 gap-4">
             <Animated
               as="h1"
               delay={0.3}
