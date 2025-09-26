@@ -73,7 +73,7 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
           transition={{ duration: 0.5 }}
         >
           <motion.form
-            className="flex flex-col w-[90%] md:w-[25%] relative bg-[#000319] p-4 rounded-xl h-[55vh] border-3 border-[#272A3C] overflow-hidden z-30 "
+            className="flex flex-col w-[90%] md:w-[25%] relative bg-[#000319] p-4 rounded-xl h-[70%] border-3 border-[#272A3C] overflow-hidden z-30 "
             onClick={(e) => e.stopPropagation()}
             onSubmit={(e) => {
               e.preventDefault();
@@ -86,7 +86,7 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
             transition={{ duration: 0.5 }}
           >
             <div className="absolute top-20  rotate-45 w-full h-[60%] modal-gradient" />
-            <div className="flex flex-col w-full h-full z-20 gap-6">
+            <div className="flex flex-col w-full h-full z-20 gap-4">
               <div className="flex w-full justify-between  items-start">
                 <div className="flex flex-col w-full pl-2">
                   <h1 className="text-white h-full text-3xl font-bold">
@@ -102,7 +102,7 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
                   x
                 </button>
               </div>
-              <div className="flex flex-col gap-4 w-full h-full">
+              <div className="flex flex-col gap-2 w-full h-full">
                 <div className="flex flex-col ">
                   <label className="pl-2" htmlFor="name">
                     {" "}
@@ -133,7 +133,7 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
                     className="border-2 border-[#272A3C] bg-[#04071D] p-2 rounded-md w-full text-white outline-none"
                   />
                 </div>
-                <div className="flex flex-col h-full">
+                <div className="flex flex-col h-[40%] pb-2">
                   <label className="pl-2" htmlFor="message">
                     Message:
                   </label>
@@ -143,7 +143,7 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
                     id="message"
                     value={formData.message}
                     onChange={handleChanger}
-                    className="border-2 border-[#272A3C] bg-[#04071D] p-2 rounded-md w-full h-[80%] resize-none outline-none"
+                    className="border-2 border-[#272A3C] bg-[#04071D] p-2 rounded-md w-full h-full resize-none outline-none"
                   ></textarea>
                 </div>
                 <button

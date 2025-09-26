@@ -9,7 +9,7 @@ function Contact() {
   const [isModalOpen, setModalOpen] = useState(false);
 
   return (
-    <section id="contact" className="section-class relative flex-col lg:px-40">
+    <section id="contact" className="section-class relative flex-col lg:px-10">
       <GridBackground
         GradientClassName="bg-radial w-full from-transparent to-[#000319]"
         SquareClassName="w-[60%] left-[50%] -translate-x-[50%]"
@@ -23,7 +23,7 @@ function Contact() {
       >
         <motion.h1
           variants={itemVariants}
-          className="text-3xl md:text-5xl md:w-[50%] text-center font-bold"
+          className="text-3xl md:text-4xl md:w-[50%] text-center font-bold"
         >
           Have a project in <span className="text-gradient">mind</span>? Let’s
           connect.

@@ -8,7 +8,7 @@ function Experience() {
   return (
     <section
       id="experience"
-      className="section-class flex-col lg:px-40 relative mb-10"
+      className="section-class flex-col lg:px-10 relative mb-10"
     >
       <h2 className="text-4xl md:text-5xl py-10 font-bold gap-2 flex">
         My Work

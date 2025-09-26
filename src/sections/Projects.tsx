@@ -12,7 +12,7 @@ function Projects() {
   return (
     <section
       id="projects"
-      className="section-class flex-col lg:px-40 relative mb-10"
+      className="section-class flex-col lg:px-10 relative mb-10"
     >
       <motion.p
         variants={itemVariants}

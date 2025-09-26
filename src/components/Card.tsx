@@ -24,10 +24,10 @@ export const Card = ({ title, description, techs = [], image }: CardProps) => {
         className="flex flex-col w-full items-center h-[60%]"
         variants={itemVariants}
       >
-        <h1 className="w-full p-2 md:p-4 text-xl md:text-3xl font-bold">
+        <h1 className="w-full p-2 md:p-4 text-xl md:text-2xl font-bold">
           {title}
         </h1>
-        <p className="w-full px-2 md:px-4 text-base md:text-xl text-[#BEC1DD]">
+        <p className="w-full px-2 md:px-4 text-sm md:text-base font-semibold text-[#BEC1DD]">
           {description}
         </p>
       </motion.div>
