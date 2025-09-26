@@ -16,7 +16,6 @@ const modalVariants = {
 export const Modal = ({ isOpen, onClose }: ModalProps) => {
   const [formData, setFormData] = useState({
     name: "",
-    email: "",
     message: "",
   });
 
@@ -34,31 +33,25 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsLoading(true);
-
+    
     try {
-      console.log("Form Submitted", formData);
+      
+      const subject = encodeURIComponent(`Message from ${formData.name}`);
+      const body = encodeURIComponent(formData.message);
+  
+      const mailtoLink = `mailto:guilhermebdias55@gmail.com?subject=${subject}&body=${body}`;
 
-      await emailjs.send(
-        "service_69ifd7q",
-        "template_qqr944h",
-        {
-          from_name: formData.name,
-          to_name: "Guilherme",
-          from_email: formData.email,
-          to_email: "guilhermebdias55@gmail.com",
-          message: formData.message,
-        },
-        "JiReFfyqc9PjoW_qW"
-      );
-      setIsLoading(false);
-      alert("Success! I will get back to you as soon as possible.");
 
-      setFormData({ name: "", email: "", message: "" });
+      setTimeout(() => {
+        window.open(mailtoLink, "_blank");
+        setIsLoading(false);
+        setFormData({ name: "", message: "" });
+      }, 1000);
+
     } catch (error) {
-      setIsLoading(false);
       console.error("Error sending email:", error);
-      alert("Something went wrong. Please try again.");
     }
+
   };
 
   return (
@@ -73,7 +66,7 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
           transition={{ duration: 0.5 }}
         >
           <motion.form
-            className="flex flex-col w-[90%] md:w-[25%] relative bg-[#000319] p-4 rounded-xl h-[70%] border-3 border-[#272A3C] overflow-hidden z-30 "
+            className="flex flex-col w-[90%] md:w-[25%] relative bg-[#000319] p-4 rounded-xl h-[50%] border-3 border-[#272A3C] overflow-hidden z-30 "
             onClick={(e) => e.stopPropagation()}
             onSubmit={(e) => {
               e.preventDefault();
@@ -118,22 +111,8 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
                     className="border-2 border-[#272A3C] bg-[#04071D] p-2 rounded-md w-full text-white outline-none"
                   />
                 </div>
-                <div className="flex flex-col ">
-                  <label className="pl-2" htmlFor="email">
-                    {" "}
-                    Email:{" "}
-                  </label>
-                  <input
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChanger}
-                    placeholder="Guilherme@example.com"
-                    type="email"
-                    className="border-2 border-[#272A3C] bg-[#04071D] p-2 rounded-md w-full text-white outline-none"
-                  />
-                </div>
-                <div className="flex flex-col h-[40%] pb-2">
+                
+                <div className="flex flex-col h-[50%] pb-2">
                   <label className="pl-2" htmlFor="message">
                     Message:
                   </label>
@@ -148,7 +127,8 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
                 </div>
                 <button
                   type="submit"
-                  className="flex justify-center p-2 w-full color-gradient border-2 border-[#272A3C] cursor-pointer rounded-xl hover:scale-102 transition"
+                  disabled={isLoading}
+                  className={`flex justify-center p-2 w-full color-gradient border-2 border-[#272A3C] cursor-pointer rounded-xl hover:scale-102 transition ${isLoading ? "opacity-50 cursor-not-allowed" : ""}`}
                 >
                   {isLoading ? "Sending..." : "Send"}
                 </button>
