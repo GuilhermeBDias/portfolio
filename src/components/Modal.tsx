@@ -1,6 +1,5 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 
 interface ModalProps {
   isOpen: boolean;
