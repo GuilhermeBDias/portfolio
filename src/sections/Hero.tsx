@@ -1,6 +1,5 @@
 import { GridBackground } from "../components/GridBackGround";
 import LigthBackGround from "../components/LigthBackGround";
-import { NavBar } from "../components/NavBar";
 import { Animated } from "../utils/AnimatedText";
 import { GoArrowUpRight } from "react-icons/go";
 
@@ -10,8 +9,6 @@ function Hero() {
       <LigthBackGround>
           <GridBackground />
         <section id="home" className="hero-class overflow-hidden mb-6 md:mb-0 z-10">
-
-          <NavBar />
           <div className="flex flex-col text-center w-full h-full justify-center items-center pt-16 md:pt-0 gap-4">
             <Animated
               as="h1"
