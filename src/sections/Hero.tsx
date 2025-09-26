@@ -8,8 +8,8 @@ function Hero() {
   return (
     <>
       <LigthBackGround>
-        <section id="home" className="hero-class overflow-hidden mb-6 md:mb-0 z-10">
           <GridBackground />
+        <section id="home" className="hero-class overflow-hidden mb-6 md:mb-0 z-10">
 
           <NavBar />
           <div className="flex flex-col text-center w-full h-full justify-center items-center pt-16 md:pt-0 gap-4">
