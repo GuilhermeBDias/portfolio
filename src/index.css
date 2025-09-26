@@ -2,7 +2,7 @@
 
 :root{
   background-color: #000319;
-  @apply text-white p-4 md:px-30;
+  @apply text-white  ;
 }
 
 ::-webkit-scrollbar{
@@ -12,11 +12,11 @@
 /* Divs */
 
 .hero-class{
-  @apply h-[95vh] w-full flex flex-col justify-center items-center ;
+  @apply h-[90vh] w-full flex flex-col justify-center items-center px-4 ;
 }
 
 .section-class{
-  @apply h-full w-full flex justify-center items-center ;
+  @apply h-full w-full flex justify-center items-center px-4 md:px-50 ;
 }
 
 .navbar-class{
@@ -64,6 +64,22 @@
   @keyframes scroll-vertical {
     to {
       transform: translateY(calc(-50% - 0.5rem));
+    }
+  }
+}
+
+@theme inline {
+  --animate-aurora: aurora 60s linear infinite;
+  @keyframes aurora {
+    from {
+      background-position:
+        50% 50%,
+        50% 50%;
+    }
+    to {
+      background-position:
+        350% 50%,
+        350% 50%;
     }
   }
 }

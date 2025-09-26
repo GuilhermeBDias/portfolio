@@ -2,6 +2,7 @@ import { BentoGrid, BentoGridItem } from "../components/BentoGrid";
 import { experience } from "../constants";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "../constants/animations";
+import { Animated } from "../utils/AnimatedText";
 
 function Experience() {
 
@@ -10,10 +11,10 @@ function Experience() {
       id="experience"
       className="section-class flex-col lg:px-10 relative mb-10"
     >
-      <h2 className="text-4xl md:text-5xl py-10 font-bold gap-2 flex">
+      <Animated className="text-4xl md:text-5xl py-10 font-bold gap-2 flex">
         My Work
         <span className="text-gradient">Experience</span>
-      </h2>
+      </Animated>
       <BentoGrid className="grid-cols-2 lg:grid-cols-2 gap-14 ">
         {experience.map((exp) => (
           <BentoGridItem className="col-span-2 lg:col-span-1 row-span-4 shadow-lg bg-gradient-to-r from-[#04071D] to-[#0C0E23]">

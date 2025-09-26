@@ -13,7 +13,7 @@ export const GridBackground = ({GradientClassName, SquareClassName, children}: G
       />
 
       {/* Radial gradient for the container to give a faded look */}
-      <div className={cn("absolute bottom-0 left-0 w-full h-full bg-gradient-to-b to-[#000319] from-transparent", GradientClassName)} />
+      <div className={cn("absolute bottom-0 left-0 w-full h-full bg-radial to-[#000319] via-[#000319]/70 from-transparent", GradientClassName)} />
       {children}
     </div>
   );

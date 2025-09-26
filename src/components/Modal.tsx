@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
+import { MdOutlineEmail } from "react-icons/md";
 
 interface ModalProps {
   isOpen: boolean;
@@ -81,7 +82,8 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
             <div className="flex flex-col w-full h-full z-20 gap-4">
               <div className="flex w-full justify-between  items-start">
                 <div className="flex flex-col w-full pl-2">
-                  <h1 className="text-white h-full text-3xl font-bold">
+                  <h1 className="flex items-center gap-2 text-white h-full text-3xl font-bold">
+                    <MdOutlineEmail />
                     Let's Talk
                   </h1>
                   <p className="text-tertiary font-semibold">Drop me a message and let's start building your idea.</p>
@@ -89,7 +91,7 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
                 <button
                   type="button"
                   onClick={onClose}
-                  className=" text-white text-2xl font-semibold hover:scale-110 transition-[scale] "
+                  className="cursor-pointer text-white text-2xl font-semibold hover:scale-110 transition-[scale] "
                 >
                   x
                 </button>

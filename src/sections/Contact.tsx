@@ -11,7 +11,7 @@ function Contact() {
   return (
     <section id="contact" className="section-class relative flex-col lg:px-10">
       <GridBackground
-        GradientClassName="bg-radial w-full from-transparent to-[#000319]"
+        GradientClassName="bg-radial w-[60%] left-[50%] -translate-x-[50%] from-transparent via-[#000319]/60 to-[#000319]"
         SquareClassName="w-[60%] left-[50%] -translate-x-[50%]"
       />
       <motion.div
