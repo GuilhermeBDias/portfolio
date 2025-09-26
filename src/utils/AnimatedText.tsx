@@ -8,7 +8,6 @@ const defaultVariants = {
 
 const defaultTag = "span";
 
-// AnimatedSpan component for animating text spans
 export function Animated({
   children,
   delay = 0.2,
