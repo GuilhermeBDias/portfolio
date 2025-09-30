@@ -38,7 +38,7 @@ function Contact() {
           <button
             onClick={() => setModalOpen(true)}
             type="button"
-            className="w-full h-[60px] border-1 border-[#272A3C] color-gradient rounded-xl text-lg md:text-xl hover:scale-105 transition-[scale]"
+            className="w-full h-[60px] border-1 border-[#272A3C] color-gradient rounded-xl text-lg md:text-xl hover:scale-105 transition-[scale] cursor-pointer"
           >
             Get in Touch
           </button>

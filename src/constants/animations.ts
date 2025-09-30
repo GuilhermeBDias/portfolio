@@ -1,10 +1,11 @@
 export const containerVariants = {
   hidden: {},
-  visible: {
+  visible: (customDelay = 0) => ({
     transition: {
       staggerChildren: 0.3,
+      delayChildren: customDelay
     },
-  },
+  }),
 };
 
 export const itemVariants = {
