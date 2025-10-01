@@ -21,7 +21,7 @@ function About() {
   return (
     <section
       id="about"
-      className="section-class flex-col lg:px-10 mb-10 relative"
+      className="section-class flex-col lg:px-10 mb-10 lg:pt-4 relative"
     >
       <BentoGrid>
         {/* Grid 1 */}
@@ -72,7 +72,7 @@ function About() {
 
         <BentoGridItem
           title="Building the future, one project at a time."
-          titleClass="text-xl md:text-2xl p-2 md:p-4 w-[90%] md:w-full "
+          titleClass="text-xl md:text-2xl p-4 md:p-4 w-[90%] md:w-full "
           className="lg:col-span-6 row-span-4 lg:row-span-5 bg-[#04071D] flex flex-col"
           divClass="flex flex-col "
         >

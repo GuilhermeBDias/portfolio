@@ -24,31 +24,55 @@ export const ProjectsData = [
   {
     title: "Patrimônio-DPDF Website",
     description: "Web tool for asset control and organization, utilizing QR Code and NFC scanning technology.",
-    image: "../../Image_patri.svg",
+    image: "../../projetos/Image_patri.svg",
     techs: [
-      { id: 1, image: "React_Logo.svg" },
-      { id: 2, image: "Tailwind_Logo.svg" },
-      { id: 3, image: "Type_Logo.svg" },
-      { id: 4, image: "Next_Logo.svg" },
-      { id: 5, image: "Motion_Logo.svg" },
+      { id: 1, image: "icones/React_Logo.svg" },
+      { id: 2, image: "icones/Tailwind_Logo.svg" },
+      { id: 3, image: "icones/Type_Logo.svg" },
+      { id: 4, image: "icones/Next_Logo.svg" },
+      { id: 5, image: "icones/HeroUI_Logo.png" },
     ]
   },
   {
-    title: "Another Project Title",
-    description: "A brief description of another project.",
+    title: "Eclipse",
+    description: "Data collection and management platform designed to streamline and optimize internal processes within the Public Defender’s Office of the Federal District (DPDF).",
+    image: "../../projetos/Eclipse.svg",
+    techs: [
+      { id: 1, image: "icones/Mongo_Logo.svg" },
+      { id: 2, image: "icones/Tailwind_Logo.svg" },
+      { id: 3, image: "icones/Type_Logo.svg" },
+      { id: 4, image: "icones/Next_Logo.svg" },
+      { id: 5, image: "icones/HeroUI_Logo.png" },
+    ]
+  },
+  {
+    title: "In Construction",
+    description: "",
     image: "",
     techs: [
-      { id: 1, image: "React_Logo.svg" },
-      { id: 2, image: "Postgres_Logo.svg" },
-      { id: 3, image: "Type_Logo.svg" },
-      { id: 4, image: "Next_Logo.svg" },
-      { id: 5, image: "Motion_Logo.svg" },
+      { id: 1, image: "icones/react.png" },
+      { id: 2, image: "icones/typescript.png" },
+      { id: 3, image: "icones/javascript.png" },
+      { id: 4, image: "icones/tailwindcss.png" },
+      { id: 5, image: "icones/nextjs.png" },
     ]
   },
   {
-    title: "Yet Another Project Title",
-    description: "A brief description of yet another project.",
-    iamge: "",
+    title: "Final Project Title",
+    description: "A brief description of the final project.",
+    image: "",
+    techs: [
+      { id: 1, image: "react.png" },
+      { id: 2, image: "typescript.png" },
+      { id: 3, image: "javascript.png" },
+      { id: 4, image: "tailwindcss.png" },
+      { id: 5, image: "nextjs.png" },
+    ]
+  },
+  {
+    title: "Final Project Title",
+    description: "A brief description of the final project.",
+    image: "",
     techs: [
       { id: 1, image: "react.png" },
       { id: 2, image: "typescript.png" },

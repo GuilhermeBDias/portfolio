@@ -40,6 +40,7 @@ export const BentoGridItem = ({
       initial="hidden"
       whileInView="visible"
       viewport={ viewport || { once: true, amount: 0.5 }}
+      whileHover={{ borderColor: "#642075", transition: { duration: 0.3 } }}
     >
       {background && (
         <div

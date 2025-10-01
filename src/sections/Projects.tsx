@@ -2,12 +2,31 @@ import { BentoGrid, BentoGridItem } from "../components/BentoGrid";
 import Card from "../components/Card";
 import { motion } from "framer-motion";
 import { ProjectsData } from "../constants";
+import { useEffect, useState } from "react";
 
 function Projects() {
+
+  const [visibleProjects, setVisibleProjects] = useState(6);
+
   const itemVariants = {
     hidden: { opacity: 0, x: -60 },
     visible: { opacity: 1, x: 0, transition: { duration: 0.8 } },
   };
+
+  
+  useEffect(() => {
+    const handleResize = () => {
+      if(window.innerWidth < 768) {
+        setVisibleProjects(3);
+      } else {
+        setVisibleProjects(3);
+      }
+    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <section
@@ -23,8 +42,8 @@ function Projects() {
       >
         Recent works I'm <span className="text-gradient">proud to share</span>
       </motion.p>
-      <BentoGrid className="grid-cols-2 lg:grid-cols-2 gap-14 ">
-        {ProjectsData.map((project) => (
+      <BentoGrid className="grid-cols-2 lg:grid-cols-3 gap-14 ">
+        {ProjectsData.slice(0, visibleProjects).map((project) => (
           <BentoGridItem
             className="col-span-2 lg:col-span-1 row-span-6 md:row-span-9"
           >

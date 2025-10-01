@@ -12,7 +12,7 @@
 /* Divs */
 
 .hero-class{
-  @apply h-[90vh] w-full flex flex-col justify-center items-center px-4 ;
+  @apply h-[90vh] w-full flex flex-col justify-center items-center pt-10 lg:pt-0 px-4 ;
 }
 
 .section-class{

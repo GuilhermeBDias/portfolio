@@ -1,5 +1,6 @@
 import { AnimatePresence, motion } from "motion/react";
 import { useState } from "react";
+import { GoArrowUpRight } from "react-icons/go";
 import { MdOutlineEmail } from "react-icons/md";
 
 interface ModalProps {
@@ -96,8 +97,8 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
                   x
                 </button>
               </div>
-              <div className="flex flex-col gap-2 w-full h-full">
-                <div className="flex flex-col ">
+              <div className="flex flex-col gap-2 w-full h-full items-center">
+                <div className="flex flex-col w-full ">
                   <label className="pl-2" htmlFor="name">
                     {" "}
                     Name:{" "}
@@ -113,7 +114,7 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
                   />
                 </div>
                 
-                <div className="flex flex-col h-[50%] pb-2">
+                <div className="flex flex-col w-full h-[50%] pb-2">
                   <label className="pl-2" htmlFor="message">
                     Message:
                   </label>
@@ -129,9 +130,10 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
                 <button
                   type="submit"
                   disabled={isLoading}
-                  className={`flex justify-center p-2 w-full color-gradient border-2 border-[#272A3C] cursor-pointer rounded-xl hover:scale-102 transition ${isLoading ? "opacity-50 cursor-not-allowed" : ""}`}
+                  className={`group flex justify-center items-center gap-1 p-2 w-full md:w-[50%] color-gradient border-2 border-[#272A3C] cursor-pointer rounded-xl hover:scale-102 transition ${isLoading ? "opacity-50 cursor-not-allowed" : ""}`}
                 >
                   {isLoading ? "Sending..." : "Send"}
+                  <GoArrowUpRight size={18}  className="group-hover:rotate-90 transition-transform duration-300"/>
                 </button>
               </div>
             </div>

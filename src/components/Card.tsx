@@ -17,11 +17,11 @@ export const Card = ({ title, description, techs = [], image }: CardProps) => {
           variants={itemVariants}
           src={image}
           alt=""
-          className="absolute w-[40%] top-10 rotate-12 z-10  "
+          className="absolute w-[50%] md:w-[70%] top-10 rotate-12 z-10 rounded-2xl "
         />
       </div>
       <motion.div
-        className="flex flex-col w-full items-center h-[60%]"
+        className="flex flex-col w-full items-center h-[60%] md:h-[70%]"
         variants={itemVariants}
       >
         <h1 className="w-full p-2 md:p-4 text-xl md:text-2xl font-bold">
