@@ -28,13 +28,13 @@ const FootBar = () => {
             <motion.li
               variants={itemVariants}
               key={index}
-              className="flex gap-4 border-1 border-[#272A3C] rounded-lg  bg-[#05041F]"
+              className="flex gap-4 border-1 border-[#272A3C] rounded-lg  bg-[#05041F] hover:scale-105 transition-[scale]"
             >
               <a
                 href={social.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full h-full border-1 border-[#272A3C] rounded-lg bg-gradient-to-r from-[#05041F] to-[#0C0E23] p-2 hover:scale-105 transition-[scale]"
+                className="w-full h-full border-1 border-[#272A3C] rounded-lg bg-gradient-to-r from-[#05041F] to-[#0C0E23] p-2 "
               >
                 {React.createElement(social.icon, { size: 24 })}
               </a>

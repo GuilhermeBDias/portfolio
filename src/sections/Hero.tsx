@@ -26,6 +26,7 @@ function Hero() {
             </Animated>
             <div className="w-[80%] sm:w-[70%] ">
               <Animated
+              
                 as="p"
                 delay={0.5}
                 className="text-5xl/13 md:text-[92px]/25 font-bold"
@@ -51,12 +52,10 @@ function Hero() {
                   as="a"
                   delay={1.1}
                   href="../../Curriculo.pdf"
-                  className="group mt-4 flex w-full md:w-[260px] items-center justify-center gap-2 color-gradient border-2 border-[#272A3C] text-white py-4 px-8 rounded-lg text-sm md:text-xl font-medium md:hover:scale-105 transition-[scale]"
+                  className="group mt-4 flex w-full md:w-[260px] items-center justify-center gap-2 color-gradient border-2 border-[#272A3C] text-white py-4 px-8 rounded-lg text-sm md:text-xl font-medium md:hover:scale-105 transition-[scale] z-10"
                 >
-                  <div className="flex w-full justify-center items-center gap-2 ">
                     <p>Download my CV</p>
                     <GoArrowUpRight size={26}  className="group-hover:rotate-90 transition-transform duration-300"/>
-                  </div>
                 </Animated>
                 <Animated as="div" className="w-full " >
                   <motion.ul
@@ -72,7 +71,7 @@ function Hero() {
                         variants={itemVariants}
                         
                         key={index}
-                        className="flex gap-4 border-1 border-[#272A3C] rounded-lg  bg-[#05041F] hover:scale-105 transition-[scale]"
+                        className="flex gap-4 border-1 border-[#272A3C] rounded-lg  bg-[#05041F] hover:scale-105 transition-[scale] z-10"
                       >
                         <a
                           href={social.link}

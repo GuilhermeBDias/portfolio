@@ -41,7 +41,9 @@
   @apply text-[#C1C2D3]
 }
 .text-gradient{
-  @apply bg-gradient-to-l from-fuchsia-400 to-purple-700 bg-clip-text text-transparent
+  @apply bg-gradient-to-l from-fuchsia-300 via-purple-500/70 to-purple-800 bg-clip-text text-transparent;
+  background-size: 200% 200%;
+  animation: gradientMove 2s ease infinite alternate;
 }
 
 .backGround-gradient-1{
@@ -81,5 +83,14 @@
         350% 50%,
         350% 50%;
     }
+  }
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
   }
 }
