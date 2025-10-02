@@ -20,7 +20,7 @@ function About() {
   return (
     <section
       id="about"
-      className="section-class flex-col lg:px-10 mb-10 lg:pt-4 relative"
+      className="section-class flex-col lg:px-10 mb-10 pt-10 lg:pt-4 relative"
     >
       <BentoGrid>
         {/* Grid 1 */}
@@ -30,6 +30,7 @@ function About() {
           titleClass="flex relative w-[70%] justify-end text-2xl md:text-3xl md:p-2"
           background="../../Grid_01.jpg"
           className="lg:col-span-11 row-span-7 lg:row-span-12 p-4"
+          viewport={{ once: true, amount: 0.2 }}
         />
 
         {/* Grid 2 */}

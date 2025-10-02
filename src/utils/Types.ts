@@ -19,6 +19,8 @@ export interface GridBackgroundProps {
 export interface BentoGridProps {
   className?: string;
   children?: ReactNode;
+  viewport?: { once: boolean;  amount: number}
+
 }
 
 export interface BentoGridItemProps {

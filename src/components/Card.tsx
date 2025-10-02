@@ -2,7 +2,7 @@ import type { CardProps } from "../utils/Types";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "../constants/animations";
 
-export const Card = ({ title, description, techs = [], image }: CardProps) => {
+export const Card = ({ title, description, techs = [], image }: CardProps) => {  
   return (
     <motion.div
       className="flex flex-col w-full h-full bg-[#04071D] p-4"
@@ -38,8 +38,11 @@ export const Card = ({ title, description, techs = [], image }: CardProps) => {
         {techs.map((tech) => (
           <motion.div
             variants={itemVariants}
+            whileHover={{ borderColor: "#642075"}}
+            animate={{ transition: {duration: 0.8, ease: "easeInOut", repeat: Infinity}}}
+            transition={{ duration: 0.3 }}
             key={tech.id}
-            className=" w-[40px] h-[40px] md:w-[60px] md:h-[60px] justify-center items-center flex rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-r from-[#04071D] to-[#0C0E23] border-2 border-[#363749] -mr-2"
+            className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] justify-center items-center flex rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-r from-[#04071D] to-[#0C0E23] border-2 border-[#363749] -mr-2 hover:scale-105 transition-[scale] duration-300"
           >
             <img
               src={`../../${tech.image}`}
