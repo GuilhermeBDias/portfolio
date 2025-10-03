@@ -5,6 +5,7 @@ import { InfiniteMovingCards } from "../components/InfinityCards";
 import { MiniCard } from "../components/MiniCard";
 import { testimonials } from "../constants";
 import { TbCopy, TbCopyCheck } from "react-icons/tb";
+import { BorderAnimation } from "../components/BorderAnimation";
 
 function About() {
   const [copied, setCopied] = useState(false);
@@ -149,19 +150,21 @@ function About() {
           viewport={{ once: true, amount: 0.05 }}
         >
           <button
-            className="flex justify-center items-center p-2 gap-2 color-gradient rounded-xl border-1 border-[#313447] hover:scale-105 transition-[scale] cursor-pointer "
+            className="flex min-w-50 relative justify-center items-center p-2 gap-2 color-gradient rounded-xl border-1 border-[#313447] hover:scale-105 transition-[scale] cursor-pointer "
             onClick={handleCopyEmail}
           >
+            <BorderAnimation size={30} duration={6} />
+            <BorderAnimation size={30} duration={6} delay={3} />
             {copied ? (
               <span className="flex justify-center items-center gap-2 w-full">
                 <TbCopyCheck size={18} />
                 Email copied!
               </span>
             ) : (
-              <>
+              <span className="flex justify-center items-center gap-2 w-full">
                 <TbCopy size={18} />
                 Copy my e-mail
-              </>
+              </span>
             )}
           </button>
           <div className="absolute left-[-10%] bottom-[-10%] w-[60%] h-[70%] backGround-gradient-1" />

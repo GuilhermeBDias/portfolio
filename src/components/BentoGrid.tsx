@@ -51,13 +51,10 @@ export const BentoGridItem = ({
       whileHover={{
         borderColor: "#642075",
         transition: { duration: 0.3 },
-        scale: 1.01,
       }}
       transition={{
-        scale: {
-          duration: 0.4, // tempo para o hover sair
-          ease: "easeOut",
-        }
+        duration: 0.4,
+        ease: "easeOut",
       }}
     >
       {background && (

@@ -86,11 +86,13 @@
   }
 }
 
-@keyframes gradientMove {
+@keyframes borderAnimation {
   0% {
+    border-image-source: linear-gradient(270deg, #ffaa40, #9c40ff, #ffaa40);
     background-position: 0% 50%;
   }
   100% {
+    border-image-source: linear-gradient(630deg, #ffaa40, #9c40ff, #ffaa40);
     background-position: 100% 50%;
   }
 }

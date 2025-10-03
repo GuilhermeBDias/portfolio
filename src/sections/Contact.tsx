@@ -4,6 +4,8 @@ import { Modal } from "../components/Modal";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "../constants/animations";
 import FootBar from "../components/FootBar";
+import { BorderAnimation } from "../components/BorderAnimation";
+import { RiMailSendLine } from "react-icons/ri";
 
 function Contact() {
   const [isModalOpen, setModalOpen] = useState(false);
@@ -34,13 +36,16 @@ function Contact() {
         >
           From idea to execution, I'll help turn your project into reality.
         </motion.h2>
-        <motion.div variants={itemVariants} className="w-full md:w-[20%]">
+        <motion.div variants={itemVariants} className="w-full relative rounded-2xl md:w-[20%] hover:scale-102 transition-[scale] duration-300">
+          <BorderAnimation size={50} duration={6} />
+          <BorderAnimation size={50} duration={6} delay={3} />
           <button
             onClick={() => setModalOpen(true)}
             type="button"
-            className="w-full h-[60px] border-1 border-[#272A3C] color-gradient rounded-xl text-lg md:text-xl hover:scale-105 transition-[scale] cursor-pointer"
+            className="w-full group flex justify-center items-center gap-2 h-[60px] border-1 border-[#272A3C] color-gradient rounded-xl text-lg md:text-xl cursor-pointer"
           >
             Get in Touch
+            <RiMailSendLine className="group-hover:translate-x-2 transition-transform duration-300" />
           </button>
         </motion.div>
       </motion.div>

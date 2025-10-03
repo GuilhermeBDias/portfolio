@@ -1,3 +1,4 @@
+import type { Transition } from "motion";
 import type { ElementType, ReactNode } from "react";
 
 export interface AnimatedElementProps {
@@ -55,4 +56,19 @@ export interface CardProps {
   imageSrc?: string;
   techs?: Tech[];
   image?: string;
+}
+
+
+export interface BorderBeamProps {
+  size?: number
+  duration?: number
+  delay?: number
+  colorFrom?: string
+  colorTo?: string
+  transition?: Transition
+  className?: string
+  style?: React.CSSProperties
+  reverse?: boolean
+  initialOffset?: number
+  borderWidth?: number
 }
