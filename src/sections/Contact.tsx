@@ -36,14 +36,14 @@ function Contact() {
         >
           From idea to execution, I'll help turn your project into reality.
         </motion.h2>
-        <motion.div variants={itemVariants} className="w-full relative rounded-2xl md:w-[20%] hover:scale-102 transition-[scale] duration-300">
-          <BorderAnimation size={50} duration={6} />
-          <BorderAnimation size={50} duration={6} delay={3} />
+        <motion.div variants={itemVariants} className="flex w-full justify-center relative rounded-2xl md:w-[40%] hover:scale-102 transition-[scale] duration-300">
           <button
             onClick={() => setModalOpen(true)}
             type="button"
-            className="w-full group flex justify-center items-center gap-2 h-[60px] border-1 border-[#272A3C] color-gradient rounded-xl text-lg md:text-xl cursor-pointer"
+            className="w-[60%] md:w-full group flex relative justify-center items-center gap-2 h-[60px] border-1 border-[#272A3C] color-gradient rounded-xl text-lg md:text-xl cursor-pointer"
           >
+          <BorderAnimation size={50} duration={6} />
+          <BorderAnimation size={50} duration={6} delay={3} />
             Get in Touch
             <RiMailSendLine className="group-hover:translate-x-2 transition-transform duration-300" />
           </button>

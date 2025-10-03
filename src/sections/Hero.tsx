@@ -22,7 +22,7 @@ function Hero() {
             <Animated
               as="h1"
               delay={0.3}
-              className="text-lg md:text-xl text-secondary font-medium tracking-wider pb-4"
+              className="text-lg md:text-2xl text-secondary font-medium tracking-wider pb-4"
             >
               Turning Ideas into Interactive Realities
             </Animated>

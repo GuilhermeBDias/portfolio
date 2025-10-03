@@ -77,7 +77,7 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
               exit="exit"
               transition={{ duration: 0.5 }}
             >
-              <div className="absolute top-20  rotate-45 w-full h-[60%] modal-gradient" />
+              <div className="absolute top-20  rotate-45 w-full h-[60%] modal-gradient " />
               <div className="flex flex-col w-full h-full z-20 gap-4">
                 <div className="flex w-full justify-between  items-start">
                   <div className="flex flex-col w-full pl-2">
