@@ -34,7 +34,7 @@ function Contact() {
           startOnView
           typeSpeed={75}
           cursorStyle="underscore"
-          className="text-3xl md:text-4xl md:w-[50%] text-center font-bold"
+          className="text-3xl md:text-4xl md:w-[50%] h-[80px] w-full text-center font-bold"
         >
           Have a project in mind? Let’s connect.
         </TextAnimation>
@@ -45,8 +45,7 @@ function Contact() {
           duration={50}
           cursorStyle="underscore"
           blinkCursor={true}
-          showCursor={true}
-          className="text-lg md:text-xl text-center text-tertiary font-mono w-full md:w-[60%] h-[50px]"
+          className="text-lg md:text-xl text-center text-tertiary font-mono w-full md:w-[50%] h-[50px]"
           words={prhase}
           loop={true}
         ></TextAnimation>
