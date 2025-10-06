@@ -1,4 +1,5 @@
 import type { Transition } from "motion";
+import type { MotionProps } from "motion/react";
 import type { ElementType, ReactNode } from "react";
 
 export interface AnimatedElementProps {
@@ -71,4 +72,21 @@ export interface BorderBeamProps {
   reverse?: boolean
   initialOffset?: number
   borderWidth?: number
+}
+
+export interface TextAnimationProps extends MotionProps {
+  children?: string
+  words?: string[]
+  className?: string
+  duration?: number
+  typeSpeed?: number
+  deleteSpeed?: number
+  delay?: number
+  pauseDelay?: number
+  loop?: boolean
+  as?: React.ElementType
+  startOnView?: boolean
+  showCursor?: boolean
+  blinkCursor?: boolean
+  cursorStyle?: "line" | "block" | "underscore"
 }

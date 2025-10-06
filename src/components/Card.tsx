@@ -59,4 +59,3 @@ export const Card = ({ title, description, techs = [], image }: CardProps) => {
   );
 };
 
-export default Card;

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "../constants/animations";
 import { BackgroundGradient } from "./BackGroundGradient";
 
-const FootBar = () => {
+export const FootBar = () => {
   return (
     <div className="flex flex-col md:flex-row w-full gap-2 justify-center md:justify-between items-center pb-10">
       <div className="flex justify-center md:justify-start w-full">
@@ -57,4 +57,3 @@ const FootBar = () => {
   );
 };
 
-export default FootBar;

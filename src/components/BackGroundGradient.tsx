@@ -22,7 +22,7 @@ export const BackgroundGradient = ({
       backgroundPosition: "0 50%", opacity: 0.5
     },
     animate: {
-      backgroundPosition: ["0, 50%", "100% 50%", "0 50%"], opacity: 1
+      backgroundPosition: ["0 50%", "100% 50%"], opacity: 1
     },
   };
   return (
@@ -34,7 +34,7 @@ export const BackgroundGradient = ({
         transition={
           animate
             ? {
-                duration: 5,
+                duration: 10,
                 repeat: Infinity,
                 repeatType: "reverse",
               }
@@ -55,7 +55,7 @@ export const BackgroundGradient = ({
         transition={
           animate
             ? {
-                duration: 5,
+                duration: 10,
                 repeat: Infinity,
                 repeatType: "reverse",
               }

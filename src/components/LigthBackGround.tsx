@@ -49,4 +49,3 @@ export const LigthBackGround = ({
   );
 };
 
-export default LigthBackGround;

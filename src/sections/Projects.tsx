@@ -1,8 +1,8 @@
 import { BentoGrid, BentoGridItem } from "../components/BentoGrid";
-import Card from "../components/Card";
 import { motion } from "framer-motion";
 import { ProjectsData } from "../constants";
 import { useEffect, useState } from "react";
+import { Card } from "../components/Card";
 
 function Projects() {
 

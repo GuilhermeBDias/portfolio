@@ -1,5 +1,4 @@
 import { GridBackground } from "../components/GridBackGround";
-import LigthBackGround from "../components/LigthBackGround";
 import { Animated } from "../utils/AnimatedText";
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
@@ -8,6 +7,7 @@ import { containerVariants, itemVariants } from "../constants/animations";
 import React from "react";
 import { BackgroundGradient } from "../components/BackGroundGradient";
 import { BorderAnimation } from "../components/BorderAnimation";
+import { LigthBackGround } from "../components/LigthBackGround";
 
 function Hero() {
   return (
@@ -55,8 +55,8 @@ function Hero() {
                   href="../../Curriculo.pdf"
                   className="group mt-4 flex relative w-full md:w-[260px] items-center justify-center gap-2 color-gradient border-1 border-[#272A3C] text-white py-4 px-8 rounded-2xl text-sm md:text-xl font-medium md:hover:scale-105 transition-[scale] z-10"
                 >
-                  <BorderAnimation size={50} duration={8}/>
-                  <BorderAnimation size={50} duration={8} delay={4}/>
+                  <BorderAnimation size={50} duration={6} />
+                  <BorderAnimation size={50} duration={6} delay={3} />
                   <p>Download my CV</p>
                   <GoArrowUpRight
                     size={26}

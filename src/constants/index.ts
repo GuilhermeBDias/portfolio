@@ -26,9 +26,9 @@ export const ProjectsData = [
     description: "Web tool for asset control and organization, utilizing QR Code and NFC scanning technology.",
     image: "../../projetos/Image_patri.svg",
     techs: [
-      { id: 1, image: "icones/React_Logo.svg" },
-      { id: 2, image: "icones/Tailwind_Logo.svg" },
-      { id: 3, image: "icones/Type_Logo.svg" },
+      { id: 1, image: "icones/SQLServer_Logo.svg" },
+      { id: 2, image: "icones/React_Logo.svg" },
+      { id: 3, image: "icones/Tailwind_Logo.svg" },
       { id: 4, image: "icones/Next_Logo.svg" },
       { id: 5, image: "icones/HeroUI_Logo.png" },
     ]
@@ -39,8 +39,8 @@ export const ProjectsData = [
     image: "../../projetos/Eclipse.svg",
     techs: [
       { id: 1, image: "icones/Mongo_Logo.svg" },
-      { id: 2, image: "icones/Tailwind_Logo.svg" },
-      { id: 3, image: "icones/Type_Logo.svg" },
+      { id: 2, image: "icones/React_Logo.svg" },
+      { id: 3, image: "icones/Tailwind_Logo.svg" },
       { id: 4, image: "icones/Next_Logo.svg" },
       { id: 5, image: "icones/HeroUI_Logo.png" },
     ]

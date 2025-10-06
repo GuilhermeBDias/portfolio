@@ -1,68 +1,69 @@
 @import "tailwindcss";
 
-:root{
+:root {
   background-color: #000319;
-  @apply text-white  ;
+  @apply text-white;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   width: 0px;
 }
 
 /* Divs */
 
-.hero-class{
-  @apply h-[90vh] w-full flex flex-col justify-center items-center pt-10 lg:pt-0 px-4 ;
+.hero-class {
+  @apply h-[90vh] w-full flex flex-col justify-center items-center pt-10 lg:pt-0 px-4;
 }
 
-.section-class{
-  @apply h-full w-full flex justify-center items-center px-4 md:px-70 ;
+.section-class {
+  @apply h-full w-full flex justify-center items-center px-4 md:px-70;
 }
 
-.navbar-class{
-  @apply rounded-2xl bg-gradient-to-r from-[#04071D] to-[#0C0E23]
+.navbar-class {
+  @apply rounded-2xl bg-gradient-to-r from-[#04071D] to-[#0C0E23];
 }
 
 /* colors */
 
-.border-color{
-  @apply bg-gradient-to-br from-[#6971A2]  to-[#272A3C]
+.border-color {
+  @apply bg-gradient-to-br from-[#6971A2]  to-[#272A3C];
 }
 
-.color-gradient{
-  @apply bg-gradient-to-r from-[#161A31] to-[#06091F]
+.color-gradient {
+  @apply bg-gradient-to-r from-[#161A31] to-[#06091F];
 }
 
-.text-secondary{
-  @apply text-[#E4ECFF]
+.text-secondary {
+  @apply text-[#E4ECFF];
 }
 
-.text-tertiary{
-  @apply text-[#C1C2D3]
+.text-tertiary {
+  @apply text-[#C1C2D3];
 }
-.text-gradient{
+.text-gradient {
   @apply bg-gradient-to-l from-fuchsia-300 via-purple-500/70 to-purple-800 bg-clip-text text-transparent;
   background-size: 200% 200%;
   animation: gradientMove 2s ease infinite alternate;
 }
 
-.backGround-gradient-1{
+.backGround-gradient-1 {
   @apply bg-radial-[at_20%_85%]  blur-3xl rounded-full -z-10 from-orange-400 via-purple-700/70 to-blue-900;
 }
 
-.backGround-gradient-2{
-  @apply bg-radial-[at_0%_90%] rounded-full blur-2xl -z-10 from-blue-400 to-blue-800
+.backGround-gradient-2 {
+  @apply bg-radial-[at_0%_90%] rounded-full blur-2xl -z-10 from-blue-400 to-blue-800;
 }
 
-.modal-gradient{
-  @apply bg-radial-[at_10%_80%] rounded-full blur-3xl from-fuchsia-700/60 via-cyan-900/40 to-gray-700/50
+.modal-gradient {
+  @apply bg-radial-[at_10%_80%] rounded-full blur-3xl from-fuchsia-700/60 via-cyan-900/40 to-gray-700/50;
 }
 
 /* Animations */
 
 @theme inline {
-  --animate-scroll-vertical: scroll-vertical var(--animation-duration, 20s) var(--animation-direction, forwards) linear infinite;
- 
+  --animate-scroll-vertical: scroll-vertical var(--animation-duration, 20s)
+    var(--animation-direction, forwards) linear infinite;
+
   @keyframes scroll-vertical {
     to {
       transform: translateY(calc(-50% - 0.5rem));
@@ -74,14 +75,10 @@
   --animate-aurora: aurora 60s linear infinite;
   @keyframes aurora {
     from {
-      background-position:
-        50% 50%,
-        50% 50%;
+      background-position: 50% 50%, 50% 50%;
     }
     to {
-      background-position:
-        350% 50%,
-        350% 50%;
+      background-position: 350% 50%, 350% 50%;
     }
   }
 }
@@ -93,6 +90,29 @@
   }
   100% {
     border-image-source: linear-gradient(630deg, #ffaa40, #9c40ff, #ffaa40);
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.animate-blink-cursor {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
     background-position: 100% 50%;
   }
 }
