@@ -12,7 +12,7 @@ function Contact() {
   const prhase = [
     "Your ideas deserve to be built — let's make them real.",
     "From idea to execution, I'll help turn your project into reality.",
-    "Transforming your vision into reality, step by step."
+    "Transforming your vision into reality, step by step.",
   ];
 
   const [isModalOpen, setModalOpen] = useState(false);
@@ -28,27 +28,29 @@ function Contact() {
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.5 }}
-        className="flex flex-col relative justify-center items-center gap-4 w-full h-[50vh] md:px-40 "
+        className="flex flex-col relative justify-center items-center gap-10 w-full h-[50vh] md:px-40 "
       >
-        <TextAnimation
-          startOnView
-          typeSpeed={75}
-          cursorStyle="underscore"
-          className="text-3xl md:text-4xl md:w-[50%] h-[80px] w-full text-center font-bold"
-        >
-          Have a project in mind? Let’s connect.
-        </TextAnimation>
-        <TextAnimation
-          typeSpeed={50}
-          delay={3000}
-          pauseDelay={4000}
-          duration={50}
-          cursorStyle="underscore"
-          blinkCursor={true}
-          className="text-lg md:text-xl text-center text-tertiary font-mono w-full md:w-[50%] h-[50px]"
-          words={prhase}
-          loop={true}
-        ></TextAnimation>
+        <div className="flex flex-col w-full justify-center items-center gap-4">
+          <TextAnimation
+            startOnView
+            typeSpeed={75}
+            cursorStyle="underscore"
+            className="text-3xl md:text-4xl md:w-[50%] h-[80px] w-full text-center font-bold"
+          >
+            Have a project in mind? Let’s connect.
+          </TextAnimation>
+          <TextAnimation
+            typeSpeed={50}
+            delay={3000}
+            pauseDelay={4000}
+            duration={50}
+            cursorStyle="underscore"
+            blinkCursor={true}
+            className="text-lg md:text-xl text-center text-tertiary font-mono w-full md:w-[50%] h-[50px]"
+            words={prhase}
+            loop={true}
+          ></TextAnimation>
+        </div>
         <motion.div
           variants={itemVariants}
           className="flex w-full justify-center relative rounded-2xl md:w-[40%] hover:scale-102 transition-[scale] duration-300"

@@ -30,14 +30,16 @@ export const InfiniteMovingCards = ({
 
   const addAnimation = React.useCallback(() => {
     if (containerRef.current && scrollerRef.current) {
-      const scrollerContent = Array.from(scrollerRef.current.children);
-
-      scrollerContent.forEach((item) => {
-        const duplicatedItem = item.cloneNode(true);
-        if (scrollerRef.current) {
-          scrollerRef.current.appendChild(duplicatedItem);
-        }
-      });
+      if (scrollerRef.current.children.length === items.length){
+        
+        const scrollerContent = Array.from(scrollerRef.current.children);
+  
+        scrollerContent.forEach((item) => {
+          const duplicatedItem = item.cloneNode(true);           
+          scrollerRef.current?.appendChild(duplicatedItem);
+          
+        });
+      }
 
       getDirection();
       setStart(true);
@@ -51,7 +53,7 @@ export const InfiniteMovingCards = ({
   return (
     <div
       ref={containerRef}
-      className={cn("scroller relative z-20 max-w-xl", className)}
+      className={cn("scroller relative z-20 max-w-lg", className)}
     >
       <ul
         ref={scrollerRef}
@@ -62,7 +64,7 @@ export const InfiniteMovingCards = ({
       >
         {items.map((item) => (
           <li
-            className=" text-sm md:text-lg w-[90px] max-w-full flex justify-center rounded-2xl px-8 py-4 md:w-[150px] bg-[#10132E]"
+            className="text-sm md:text-base w-[90px] max-w-full flex justify-center rounded-2xl px-8 py-4 md:w-[130px] bg-[#10132E] border-2 border-[#272A3C]"
             key={item.title}
           >
             {item.title}

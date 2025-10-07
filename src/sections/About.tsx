@@ -61,7 +61,7 @@ function About() {
           titleClass="flex relative justify-center w-[80%] text-xl md:text-xl pl-4"
           className="lg:col-span-9 row-span-5 lg:row-span-6"
         >
-          <div className="flex w-full justify-end gap-1 pr-2 md:pr-4">
+          <div className="flex w-full justify-end gap-2 pr-2 md:pr-4">
             <InfiniteMovingCards items={testimonials} />
             <InfiniteMovingCards items={testimonials} direction="bottom" />
           </div>
