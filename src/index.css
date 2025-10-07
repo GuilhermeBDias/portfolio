@@ -41,17 +41,15 @@
   @apply text-[#C1C2D3];
 }
 .text-gradient {
-  @apply bg-gradient-to-l from-fuchsia-300 via-purple-500/70 to-purple-800 bg-clip-text text-transparent;
-  background-size: 200% 200%;
-  animation: gradientMove 2s ease infinite alternate;
+  @apply bg-gradient-to-l from-fuchsia-300 via-purple-500/70 to-purple-800 bg-clip-text text-transparent animate-gradientMove;
 }
 
 .backGround-gradient-1 {
-  @apply bg-radial-[at_20%_85%]  blur-3xl rounded-full -z-10 from-orange-400 via-purple-700/70 to-blue-900;
+  @apply bg-radial-[at_20%_85%]  blur-3xl rounded-full -z-10 from-orange-400 via-purple-700/70 to-blue-800;
 }
 
 .backGround-gradient-2 {
-  @apply bg-radial-[at_0%_90%] rounded-full blur-2xl -z-10 from-blue-400 to-blue-800;
+  @apply bg-radial-[at_0%_90%] rounded-full blur-2xl -z-10 from-blue-300/80 to-blue-800;
 }
 
 .modal-gradient {
@@ -108,11 +106,17 @@
   animation: blink 1s step-end infinite;
 }
 
-@keyframes gradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
+@theme inline {
+  --animate-gradientMove: gradientMove 4s ease infinite alternate;
+  @keyframes gradientMove {
+    
+    0% {
+      background-size: 200% 200%;
+      background-position: 0% 50%;
+    }
+    100% {
+      background-size: 200% 200%;
+      background-position: 100% 50%;
+    }
   }
 }

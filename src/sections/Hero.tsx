@@ -1,6 +1,5 @@
 import { GridBackground } from "../components/GridBackGround";
 import { Animated } from "../utils/AnimatedText";
-import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
 import { socialLinks } from "../constants";
 import { containerVariants, itemVariants } from "../constants/animations";
@@ -8,6 +7,7 @@ import React from "react";
 import { BackgroundGradient } from "../components/BackGroundGradient";
 import { BorderAnimation } from "../components/BorderAnimation";
 import { LigthBackGround } from "../components/LigthBackGround";
+import GeneratePdfButton from "../utils/GeneratePdf";
 
 function Hero() {
   return (
@@ -52,16 +52,14 @@ function Hero() {
                 <Animated
                   as="a"
                   delay={1.1}
-                  href="../../Curriculo.pdf"
-                  className="group mt-4 flex relative w-full md:w-[260px] items-center justify-center gap-2 color-gradient border-1 border-[#272A3C] text-white py-4 px-8 rounded-2xl text-sm md:text-xl font-medium md:hover:scale-105 transition-[scale] z-10"
+                  className="group mt-4 flex relative overflow-hidden w-full md:w-[260px] items-center justify-center gap-2 color-gradient border-1 border-[#272A3C] text-white py-6 md:py-8 px-8 rounded-2xl text-sm md:text-xl font-medium md:hover:scale-105 transition-[scale] z-10"
                 >
-                  <BorderAnimation size={50} duration={6} />
-                  <BorderAnimation size={50} duration={6} delay={3} />
-                  <p>Download my CV</p>
-                  <GoArrowUpRight
-                    size={26}
-                    className="group-hover:rotate-90 transition-transform duration-300"
-                  />
+                  <BorderAnimation size={50} duration={6} className="hidden md:flex" />
+                  <BorderAnimation size={40} duration={6} className="flex md:hidden" />
+                  <BorderAnimation size={50} duration={6} delay={3} className="hidden md:flex" />
+                  <BorderAnimation size={40} duration={6} delay={3} className="flex md:hidden"/>
+                  <GeneratePdfButton />
+                  
                 </Animated>
                 <Animated as="div" className="w-full">
                   <motion.ul
