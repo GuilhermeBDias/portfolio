@@ -212,6 +212,7 @@ function GeneratePdf() {
 
   const url = doc.output("bloburl");
   window.open(url, "_blank");
+  doc.save("GuilhermeBDias-Curriculo.pdf");
 }
 
 const GeneratePdfButton = () => {
