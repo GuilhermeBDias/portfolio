@@ -130,7 +130,7 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
                   <button
                     type="submit"
                     disabled={isLoading}
-                    className={`group flex justify-center items-center gap-1 p-2 w-full md:w-[50%] color-gradient border-2 border-[#272A3C] cursor-pointer rounded-xl hover:scale-102 transition-[scale] ${
+                    className={`group flex justify-center items-center gap-1 p-2 w-full color-gradient border-2 border-[#272A3C] cursor-pointer rounded-xl hover:scale-102 transition-[scale] ${
                       isLoading ? "opacity-50 cursor-not-allowed" : ""
                     }`}
                   >

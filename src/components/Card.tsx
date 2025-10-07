@@ -11,13 +11,13 @@ export const Card = ({ title, description, techs = [], image }: CardProps) => {
       whileInView="visible"
       viewport={{ once: true, amount: 0.5 }}
     >
-      <div className="flex relative justify-center items-center overflow-hidden w-full h-[100%] bg-[#13162D] rounded-2xl">
-        <div className="absolute left-20 md:left-40 -top-10 md:-top-20 w-[30%] h-full rotate-45 rounded-full bg-radial-[at_40%_85%] from-cyan-500/90 via-gray-500/60 to-violet-700 blur-3xl" />
+      <div className="flex relative justify-center items-center overflow-hidden w-full h-full bg-[#13162D] rounded-2xl">
+        <div className="absolute left-20 md:left-40 -top-10 md:-top-20 w-[30%] h-full rotate-45 rounded-full bg-radial-[at_40%_85%] from-cyan-500/90 via-gray-500/60 to-violet-700 blur-3xl animate-gradientMove" />
         <motion.img
           variants={itemVariants}
           src={image}
           alt=""
-          className="absolute w-[50%] md:w-[70%] top-10 rotate-12 z-10 rounded-2xl "
+          className="absolute w-[50%] md:w-[70%] top-10 rotate-12 z-10 rounded-2xl"
         />
       </div>
       <motion.div
@@ -32,7 +32,7 @@ export const Card = ({ title, description, techs = [], image }: CardProps) => {
         </p>
       </motion.div>
       <motion.div
-        className="flex w-full justify-center items-center px-2 md:px-4 pb-4"
+        className="flex w-full justify-center items-center pt-4 px-2 md:px-4 pb-4"
         variants={containerVariants}
       >
         {techs.map((tech) => (

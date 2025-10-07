@@ -45,7 +45,7 @@ function Projects() {
       <BentoGrid className="grid-cols-2 lg:grid-cols-3 gap-14 ">
         {ProjectsData.slice(0, visibleProjects).map((project) => (
           <BentoGridItem
-            className="col-span-2 lg:col-span-1 row-span-6 md:row-span-9 border-2 border-[#161935]"
+            className="col-span-2 lg:col-span-1 row-span-7 md:row-span-9 border-2 border-[#161935]"
           >
             <Card title={project.title} description={project.description} image={project.image} techs={project.techs} />
           </BentoGridItem>

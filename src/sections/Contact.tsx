@@ -58,7 +58,7 @@ function Contact() {
           <button
             onClick={() => setModalOpen(true)}
             type="button"
-            className="w-[60%] md:w-full group flex relative justify-center items-center gap-2 h-[60px] border-1 border-[#272A3C] color-gradient rounded-xl text-lg md:text-xl cursor-pointer"
+            className="w-full md:w-[60%]  group flex relative justify-center items-center gap-2 h-[60px] border-1 border-[#272A3C] color-gradient rounded-xl text-lg md:text-xl cursor-pointer"
           >
             <BorderAnimation size={50} duration={6} />
             <BorderAnimation size={50} duration={6} delay={3} />
