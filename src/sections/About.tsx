@@ -21,14 +21,14 @@ function About() {
   return (
     <section
       id="about"
-      className="section-class flex-col lg:px-10 mb-10 pt-10 lg:pt-4 relative"
+      className="section-class flex-col lg:px-10 mb-10 pt-10 relative"
     >
       <BentoGrid>
         {/* Grid 1 */}
 
         <BentoGridItem
           title="I prioritize service quality and long-term collaboration with clients."
-          titleClass="flex relative w-[70%] justify-end text-2xl md:text-3xl md:p-2"
+          titleClass="flex relative w-[70%] justify-end text-2xl md:p-2"
           background="../../Grid_01.jpg"
           className="lg:col-span-11 row-span-7 lg:row-span-12 p-4"
           viewport={{ once: true, amount: 0.2 }}
@@ -39,7 +39,7 @@ function About() {
         <BentoGridItem
           title="Brazil is home, but my workspace is wherever the internet reaches."
           className="lg:col-span-9 row-span-5 lg:row-span-6 overflow-hidden "
-          titleClass="text-xl md:text-3xl p-4"
+          titleClass="text-xl md:text-2xl p-4"
           viewport={{ once: true, amount: 0.7 }}
         >
           <div className="absolute top-[30%] md:top-[20%] left-1/2 -translate-x-1/2 -z-10 w-[600px] md:w-[900px] h-[800px]  invert rounded-full overflow-hidden ">
@@ -56,8 +56,9 @@ function About() {
 
         <BentoGridItem
           title="My Tech Stack"
-          subTitle="I constantly try to improve"
-          titleClass="flex relative justify-center w-[80%] text-xl md:text-2xl pl-4"
+          subTitle="Always improving"
+          
+          titleClass="flex relative justify-center w-[80%] text-xl md:text-xl pl-4"
           className="lg:col-span-9 row-span-5 lg:row-span-6"
         >
           <div className="flex w-full justify-end gap-1 pr-2 md:pr-4">
@@ -91,7 +92,7 @@ function About() {
         <BentoGridItem
           title="Building a modern car enthusiasts hub"
           subTitle="Behind the scenes of my work"
-          titleClass="justify-center p-4 w-[65%] md:w-[50%] text-xl md:text-4xl "
+          titleClass="justify-center p-4 w-[65%] md:w-[50%] text-xl md:text-3xl "
           className="hidden md:flex col-span-14 row-span-10"
           viewport={{ once: true, amount: 0.3 }}
         >
@@ -144,13 +145,13 @@ function About() {
 
         <BentoGridItem
           title="Have an idea? Let's make it real."
-          titleClass="justify-center items-center pb-4 w-[80%] text-center text-3xl  h-auto "
+          titleClass="justify-center items-center pb-4 w-[80%] text-center text-2xl h-auto "
           divClass="justify-center flex-col items-center"
-          className="hidden md:flex  col-span-6 row-span-5"
+          className="hidden md:flex col-span-6 row-span-5"
           viewport={{ once: true, amount: 0.05 }}
         >
           <button
-            className="flex min-w-50 relative justify-center items-center p-2 gap-2 color-gradient rounded-xl border-1 border-[#313447] hover:scale-105 transition-[scale] cursor-pointer "
+            className="flex min-w-50 relative justify-center items-center p-2 gap-2 color-gradient rounded-xl border-1 border-[#313447] hover:scale-105 transition-[scale] cursor-pointer"
             onClick={handleCopyEmail}
           >
             <BorderAnimation size={30} duration={6} />

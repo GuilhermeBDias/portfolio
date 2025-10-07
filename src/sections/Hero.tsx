@@ -16,21 +16,21 @@ function Hero() {
         <GridBackground />
         <section
           id="home"
-          className="hero-class overflow-hidden mb-6 md:mb-0 z-10"
+          className="hero-class overflow-hidden z-10"
         >
           <div className="flex flex-col text-center w-full h-full justify-center items-center pt-16 md:pt-20 gap-4">
             <Animated
               as="h1"
               delay={0.3}
-              className="text-lg md:text-2xl text-secondary font-medium tracking-wider pb-4"
+              className="text-lg md:text-2xl text-secondary font-medium tracking-wider pb-2"
             >
               Turning Ideas into Interactive Realities
             </Animated>
-            <div className="w-[80%] sm:w-[70%] ">
+            <div className="w-[80%] md:w-[80%]">
               <Animated
                 as="p"
                 delay={0.5}
-                className="text-5xl/13 md:text-[92px]/25 font-bold"
+                className="flex flex-col gap-2 text-4xl md:text-[56px] font-bold w-full"
               >
                 Bridging the gap between design and
                 <Animated as="span" delay={0.7} className="text-gradient">

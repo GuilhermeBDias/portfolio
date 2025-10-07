@@ -24,7 +24,7 @@ export const Card = ({ title, description, techs = [], image }: CardProps) => {
         className="flex flex-col w-full items-center h-[60%] md:h-[70%]"
         variants={itemVariants}
       >
-        <h1 className="w-full p-2 md:p-4 text-xl md:text-2xl font-bold">
+        <h1 className="w-full p-2 md:p-4 text-xl md:text-xl font-bold text-slate-200">
           {title}
         </h1>
         <p className="w-full px-2 md:px-4 text-sm md:text-base font-semibold text-[#BEC1DD]">
@@ -32,7 +32,7 @@ export const Card = ({ title, description, techs = [], image }: CardProps) => {
         </p>
       </motion.div>
       <motion.div
-        className="flex w-full justify-between items-center px-2 md:px-4 pb-4"
+        className="flex w-full justify-center items-center px-2 md:px-4 pb-4"
         variants={containerVariants}
       >
         {techs.map((tech) => (
@@ -42,7 +42,7 @@ export const Card = ({ title, description, techs = [], image }: CardProps) => {
             animate={{ transition: {duration: 0.8, ease: "easeInOut", repeat: Infinity}}}
             transition={{ duration: 0.3 }}
             key={tech.id}
-            className="w-[40px] h-[40px] md:w-[60px] md:h-[60px] justify-center items-center flex rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-r from-[#04071D] to-[#0C0E23] border-2 border-[#363749] -mr-2 hover:scale-105 transition-[scale] duration-300"
+            className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] justify-center items-center flex rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-r from-[#04071D] to-[#0C0E23] border-2 border-[#363749] -mr-2 hover:scale-105 transition-[scale] duration-300"
           >
             <img
               src={`../../${tech.image}`}

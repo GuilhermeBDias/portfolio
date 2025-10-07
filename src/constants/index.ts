@@ -98,9 +98,9 @@ export const ProjectsData = [
 
 export const experience = [
   { title: "Full-Stack developer trainee", description: "Assisted in the development of web applications using React, Node.js, and SQLServer.", image: "../../Logo_Main_01.svg" },
-  { title: "IT Support Intern", description: "Provided technical support and troubleshooting for hardware and software issues.", image: "../../Logo_Main_02.svg" },
-  { title: "Freelance Developer", description: "Developed and maintained websites for small businesses using HTML, CSS, and JavaScript.", image: "../../Logo_Ex_03.svg" },
-  { title: "Freelance Web Developer", description: "Developed and maintained websites for small businesses using HTML, CSS, and JavaScript.", image: "../../Logo_Ex_04.svg" },
+  { title: "Computer Science Student", description: "Gained solid foundations in programming, software development best practices, and version control (Git).", image: "../../Logo_Main_02.svg" },
+  { title: "Junior Web Developer", description: "Worked on small-scale projects while improving skills in React, TypeScript, and agile development practices.", image: "../../Logo_Ex_03.svg" },
+  { title: "Freelance Web Developer", description: "Built responsive landing pages and optimized front-end performance for better user experience.", image: "../../Logo_Ex_04.svg" },
 ]
 
 

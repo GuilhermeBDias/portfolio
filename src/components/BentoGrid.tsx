@@ -10,7 +10,7 @@ export const BentoGrid = ({
   return (
     <motion.div
       className={cn(
-        "grid grid-cols-1 lg:grid-cols-20 auto-rows-[20px] w-full max-w-[100rem] gap-6",
+        "grid grid-cols-1 lg:grid-cols-20 auto-rows-[20px] md:auto-rows-[14px] w-full max-w-[100rem] gap-6",
         className
       )}
       variants={itemVariants}
@@ -71,7 +71,7 @@ export const BentoGridItem = ({
       <div className={cn("relative z-10 flex w-full h-full", divClass)}>
         <div className={cn("flex flex-col h-full z-20", titleClass)}>
           {subTitle && (
-            <p className="text-xs md:text-xl text-tertiary z-10 font-medium">
+            <p className="text-xs md:text-base text-tertiary z-10 font-medium">
               {subTitle}
             </p>
           )}

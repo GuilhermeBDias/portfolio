@@ -63,7 +63,7 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <BackgroundGradient className="w-full h-[50vh]" >
+          <BackgroundGradient className="w-full h-[50vh] md:h-[55vh] " >
             <motion.form
               className="flex flex-col w-full bg-[#000319] p-4 rounded-2xl h-full overflow-hidden z-30 "
               onClick={(e) => e.stopPropagation()}
