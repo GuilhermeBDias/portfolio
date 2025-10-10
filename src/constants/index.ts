@@ -48,7 +48,7 @@ export const ProjectsData = [
   {
     title: "In Construction",
     description: "",
-    image: "",
+    image: "../../projetos/Desktop.svg",
     techs: [
       { id: 1, image: "icones/" },
       { id: 2, image: "icones/" },
