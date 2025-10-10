@@ -25,6 +25,7 @@ export const ProjectsData = [
     title: "Patrimônio-DPDF Website",
     description: "Web tool for asset control and organization, utilizing QR Code and NFC scanning technology.",
     image: "../../projetos/Image_patri.svg",
+    imageSize: "w-[50%]",
     techs: [
       { id: 1, image: "icones/SQLServer_Logo.svg" },
       { id: 2, image: "icones/Next_Logo.svg" },
@@ -37,6 +38,7 @@ export const ProjectsData = [
     title: "Eclipse",
     description: "Data collection and management platform designed to streamline and optimize internal processes within the Public Defender’s Office of the Federal District (DPDF).",
     image: "../../projetos/Eclipse.svg",
+    imageSize: "w-[50%]",
     techs: [
       { id: 1, image: "icones/Mongo_Logo.svg" },
       { id: 2, image: "icones/Next_Logo.svg" },
@@ -46,23 +48,17 @@ export const ProjectsData = [
     ]
   },
   {
-    title: "In Construction",
+    title: "Vroomly (In Construction)",
     description: "",
-    image: "../../projetos/Desktop.svg",
+    image: "../../projetos/Vroomly.svg",
+    imageSize: "w-[80%]  ",
     techs: [
-      { id: 1, image: "icones/" },
-      { id: 2, image: "icones/" },
-      { id: 3, image: "icones/" },
-      { id: 4, image: "icones/" },
-      { id: 5, image: "icones/" },
+      { id: 1, image: "icones/Postgres_Logo.svg" },
+      { id: 2, image: "icones/Next_Logo.svg" },
+      { id: 3, image: "icones/Tailwind_Logo.svg" },
+      { id: 4, image: "icones/Docker_Logo.svg" },
+      { id: 5, image: "icones/React_Logo.svg" },
     ]
-    // techs: [
-    //   { id: 1, image: "icones/Postgres_Logo.svg" },
-    //   { id: 2, image: "icones/Next_Logo.svg" },
-    //   { id: 3, image: "icones/Tailwind_Logo.svg" },
-    //   { id: 4, image: "icones/Docker_Logo.svg" },
-    //   { id: 5, image: "icones/React_Logo.svg" },
-    // ]
   },
   {
     title: "Final Project Title",

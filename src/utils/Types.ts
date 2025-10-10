@@ -57,6 +57,7 @@ export interface CardProps {
   imageSrc?: string;
   techs?: Tech[];
   image?: string;
+  imageSize?: string;
 }
 
 

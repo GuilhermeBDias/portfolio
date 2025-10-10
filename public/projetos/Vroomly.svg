@@ -1,9 +1,10 @@
 <svg width="1440" height="1024" viewBox="0 0 1440 1024" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g clip-path="url(#clip0_1_28)">
 <rect width="1440" height="1024" rx="24" fill="#F4F4F6"/>
+<rect y="900" width="1440" height="133" fill="#F4F4F6"/>
 <g clip-path="url(#clip1_1_28)">
 <rect width="1440" height="900" fill="#3F1D63"/>
-<rect x="514" y="698.209" width="830" height="830" rx="160" transform="rotate(-45 514 698.209)" fill="#6E13C7"/>
+<path d="M724.239 900C583.656 900 511.414 731.702 608.25 629.789L995.307 222.438C1054.34 160.31 1151.84 155.729 1216.44 212.05L1683.66 619.401C1795.12 716.581 1726.39 900 1578.51 900L1090.5 900L724.239 900Z" fill="#6E13C7"/>
 <rect x="457" y="-27" width="1217" height="1217" fill="url(#pattern0_1_28)"/>
 <g filter="url(#filter0_d_1_28)">
 <rect x="199" y="25" width="1041" height="70" rx="35" fill="#F4F4F6"/>
@@ -58,7 +59,7 @@
 <path d="M1298.12 982.988C1298.12 983.142 1298.21 983.241 1298.34 983.241H1302.4V984.582H1297.17C1296.26 984.582 1295.64 983.91 1295.64 982.907V978.208C1295.64 977.201 1296.26 976.531 1297.17 976.531H1302.4V977.874H1298.34C1298.21 977.874 1298.12 977.974 1298.12 978.125V979.769H1301.93V981.111H1298.12V982.988Z" fill="black"/>
 </g>
 </g>
-<rect x="2" y="2" width="1436" height="1020" rx="22" stroke="#3F1D63" stroke-width="4"/>
+<rect x="0.5" y="0.5" width="1439" height="1023" rx="23.5" stroke="white"/>
 <defs>
 <pattern id="pattern0_1_28" patternContentUnits="objectBoundingBox" width="1" height="1">
 <use xlink:href="#image0_1_28" transform="scale(0.0005)"/>

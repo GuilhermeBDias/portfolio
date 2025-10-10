@@ -2,7 +2,7 @@ import type { CardProps } from "../utils/Types";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "../constants/animations";
 
-export const Card = ({ title, description, techs = [], image }: CardProps) => {  
+export const Card = ({ title, description, techs = [], image, imageSize }: CardProps) => {  
   return (
     <motion.div
       className="flex flex-col w-full h-full bg-[#04071D] p-4"
@@ -17,7 +17,7 @@ export const Card = ({ title, description, techs = [], image }: CardProps) => {
           variants={itemVariants}
           src={image}
           alt=""
-          className="absolute w-[50%] md:w-[70%] top-10 rotate-12 z-10 rounded-2xl"
+          className={`absolute ${imageSize} top-8 rotate-12 z-10 rounded-2xl`}
         />
       </div>
       <motion.div

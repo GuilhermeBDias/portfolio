@@ -47,7 +47,7 @@ function Projects() {
           <BentoGridItem
             className="col-span-2 lg:col-span-1 row-span-7 md:row-span-9 border-2 border-[#161935]"
           >
-            <Card title={project.title} description={project.description} image={project.image} techs={project.techs} />
+            <Card title={project.title} description={project.description} image={project.image} imageSize={project.imageSize} techs={project.techs} />
           </BentoGridItem>
         ))}
       </BentoGrid>
