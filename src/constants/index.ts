@@ -50,7 +50,7 @@ export const ProjectsData = [
   {
     title: "Vroomly (In Construction)",
     description: "",
-    image: "../../projetos/Vroomly.svg",
+    image: "../../projetos/Vroomly.png",
     imageSize: "w-[80%]  ",
     techs: [
       { id: 1, image: "icones/Postgres_Logo.svg" },
