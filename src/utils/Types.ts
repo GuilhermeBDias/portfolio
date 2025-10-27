@@ -54,10 +54,12 @@ export interface Tech {
 export interface CardProps {
   title?: string;
   description?: string;
+  completeDescription?: string;
   imageSrc?: string;
   techs?: Tech[];
   image?: string;
   imageSize?: string;
+  onOpenModal: () => void;
 }
 
 
@@ -90,4 +92,17 @@ export interface TextAnimationProps extends MotionProps {
   showCursor?: boolean
   blinkCursor?: boolean
   cursorStyle?: "line" | "block" | "underscore"
+}
+
+export interface ModalProjectsProps {
+  isOpen: boolean;
+  onClose: () => void;
+  project?: {
+    title?: string;
+    description?: string;
+    completeDescription?: string
+    image?: string;
+    imageSize?: string;
+    techs?: { id: number; image: string }[];
+  }
 }

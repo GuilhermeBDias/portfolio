@@ -1,8 +1,17 @@
 import type { CardProps } from "../utils/Types";
 import { motion } from "framer-motion";
 import { containerVariants, itemVariants } from "../constants/animations";
+import { GoArrowUpRight } from "react-icons/go";
 
-export const Card = ({ title, description, techs = [], image, imageSize }: CardProps) => {  
+export const Card = ({
+  title,
+  description,
+  techs = [],
+  image,
+  imageSize,
+  onOpenModal
+}: CardProps) => {
+
   return (
     <motion.div
       className="flex flex-col w-full h-full bg-[#04071D] p-4"
@@ -32,17 +41,23 @@ export const Card = ({ title, description, techs = [], image, imageSize }: CardP
         </p>
       </motion.div>
       <motion.div
-        className="flex w-full justify-center items-center pt-4 px-2 md:px-4 pb-4"
+        className="flex w-full justify-center items-center pt-4 px-2 md:px-4 pb-4 "
         variants={containerVariants}
       >
         {techs.map((tech) => (
           <motion.div
             variants={itemVariants}
-            whileHover={{ borderColor: "#642075"}}
-            animate={{ transition: {duration: 0.8, ease: "easeInOut", repeat: Infinity}}}
+            whileHover={{ borderColor: "#642075" }}
+            animate={{
+              transition: {
+                duration: 0.8,
+                ease: "easeInOut",
+                repeat: Infinity,
+              },
+            }}
             transition={{ duration: 0.3 }}
             key={tech.id}
-            className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] justify-center items-center flex rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-r from-[#04071D] to-[#0C0E23] border-2 border-[#363749] -mr-2 hover:scale-105 transition-[scale] duration-300"
+            className="w-[40px] h-[40px] md:w-[45px] md:h-[45px] justify-center items-center flex rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-r from-[#04071D] to-[#0C0E23] border-2 border-[#363749] -mr-2 hover:scale-105 transition-[scale] duration-300"
           >
             <img
               src={`../../${tech.image}`}
@@ -51,11 +66,16 @@ export const Card = ({ title, description, techs = [], image, imageSize }: CardP
             />
           </motion.div>
         ))}
-        <div className="flex w-full justify-end items-center text-gradient font-bold ">
-          
+        <div className="flex w-full justify-end items-center font-bold  pl-6 ">
+          <button className="cursor-pointer border-2 rounded-xl border-[#363749] text-xs md:text-sm p-0 md:p-2 flex gap-1 justify-center items-center hover:scale-105 transition-[scale]"
+            onClick={onOpenModal}
+          >
+            details <GoArrowUpRight size={20} color="#ffffff" />
+          </button>
         </div>
       </motion.div>
-    </motion.div>
-  );
-};
 
+      
+    </motion.div>
+  )   
+};
