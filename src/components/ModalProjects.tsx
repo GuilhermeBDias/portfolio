@@ -1,6 +1,7 @@
 import { AnimatePresence } from "motion/react";
 import { motion } from "framer-motion";
 import type { ModalProjectsProps } from "../utils/Types";
+import { RiCloseCircleLine } from "react-icons/ri";
 
 const modalVariants = {
   hidden: { opacity: 0, scale: 0.95, y: -30 },
@@ -8,40 +9,56 @@ const modalVariants = {
   exit: { opacity: 0, scale: 0.95, y: -30 },
 };
 
-export const ModalProjects = ({ isOpen, onClose, project }: ModalProjectsProps) => {
-
-  if(!project) return null;
+export const ModalProjects = ({
+  isOpen,
+  onClose,
+  project,
+}: ModalProjectsProps) => {
+  if (!project) return null;
 
   return (
     <AnimatePresence>
       {isOpen && (
-        <motion.div className="fixed inset-0 bg-black/70 z-20 flex justify-center items-center px-4"
+        <motion.div
+          className="fixed inset-0 bg-black/70 z-20 flex justify-center items-center px-4"
           onClick={onClose}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
-          transition={{ duration: 0.5 }}>
-
-            <motion.div
+          transition={{ duration: 0.5 }}
+        >
+          <motion.div
             onClick={(e) => e.stopPropagation()}
-            className="bg-[#13162D] rounded-2xl p-8 max-w-lg w-[90%] text-white shadow-lg flex flex-col justify-center items-center"
+            className="flex flex-col justify-center items-center relative bg-[#13162D] rounded-2xl p-8 max-w-lg w-[90%] text-white shadow-lg"
             variants={modalVariants}
             initial="hidden"
             animate="visible"
             exit="exit"
-            transition={{duration: 0.5}}
+            transition={{ duration: 0.5 }}
           >
             <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
+            <button className="absolute top-4 right-4 text-gray-400 hover:text-white cursor-pointer" onClick={onClose}>
+              <RiCloseCircleLine size={30} />
+            </button>
 
-            {project.image && (
-              <img
-                src={project.image}
-                alt={project.title}
-                className={`rounded-xl mb-4 ${project.imageSize}`}
-              />
+            {project.image && project.image_2 && (
+              <div className="flex gap-3 justify-center items-center">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className={`rounded-xl mb-4 ${project.imageSizeModal}`}
+                />
+                <img
+                  src={project.image_2}
+                  alt={project.title}
+                  className={`rounded-xl mb-4 ${project.imageSizeModal}`}
+                />
+              </div>
             )}
 
-            <p className="text-sm text-gray-300 mb-6 whitespace-pre-line">{project.completeDescription}</p>
+            <p className="text-sm md:text-base text-gray-300 mb-6 whitespace-pre-line">
+              {project.completeDescription}
+            </p>
 
             {project.techs && project.techs.length > 0 && (
               <div className="flex gap-2 flex-wrap mb-6">
@@ -59,17 +76,9 @@ export const ModalProjects = ({ isOpen, onClose, project }: ModalProjectsProps) 
                 ))}
               </div>
             )}
-
-            <button
-              className="mt-4 bg-cyan-600 hover:bg-cyan-700 px-4 py-2 rounded-lg text-white font-semibold"
-              onClick={onClose}
-            >
-              Fechar
-            </button>
           </motion.div>
-
         </motion.div>
       )}
     </AnimatePresence>
-  )
-}
+  );
+};

@@ -44,7 +44,7 @@ export const Card = ({
         className="flex w-full justify-center items-center pt-4 px-2 md:px-4 pb-4 "
         variants={containerVariants}
       >
-        {techs.map((tech) => (
+        {techs.slice(0, 5).map((tech) => (
           <motion.div
             variants={itemVariants}
             whileHover={{ borderColor: "#642075" }}
@@ -67,10 +67,10 @@ export const Card = ({
           </motion.div>
         ))}
         <div className="flex w-full justify-end items-center font-bold  pl-6 ">
-          <button className="cursor-pointer border-2 rounded-xl border-[#363749] text-xs md:text-sm p-0 md:p-2 flex gap-1 justify-center items-center hover:scale-105 transition-[scale]"
+          <button className="cursor-pointer border-2 rounded-xl border-[#363749] text-xs md:text-sm p-2 md:p-2 flex gap-1 justify-center items-center hover:scale-105 transition-[scale]"
             onClick={onOpenModal}
           >
-            details <GoArrowUpRight size={20} color="#ffffff" />
+            Details <GoArrowUpRight size={20} color="#ffffff" />
           </button>
         </div>
       </motion.div>

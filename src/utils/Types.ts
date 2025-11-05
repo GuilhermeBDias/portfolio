@@ -102,7 +102,10 @@ export interface ModalProjectsProps {
     description?: string;
     completeDescription?: string
     image?: string;
+    image_2?: string;
     imageSize?: string;
+    imageSizeModal?: string;
     techs?: { id: number; image: string }[];
+    fullThecs?: { id: number; image: string }[]
   }
 }

@@ -11,7 +11,7 @@ function Experience() {
       id="experience"
       className="section-class flex-col lg:px-10 relative mb-10"
     >
-      <Animated className="text-4xl md:text-5xl py-10 font-bold gap-2 flex">
+      <Animated className="text-3xl md:text-5xl py-10 font-bold gap-2 flex">
         My Work
         <span className="text-gradient">Experience</span>
       </Animated>
