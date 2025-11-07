@@ -29,7 +29,7 @@ export const ModalProjects = ({
         >
           <motion.div
             onClick={(e) => e.stopPropagation()}
-            className="flex flex-col justify-center items-center relative bg-[#13162D] rounded-2xl p-8 max-w-lg w-[90%] text-white shadow-lg"
+            className="flex flex-col justify-center items-center relative bg-[#13162D] rounded-2xl p-8 max-w-lg w-[90%] min-h-[40%] text-white shadow-lg"
             variants={modalVariants}
             initial="hidden"
             animate="visible"

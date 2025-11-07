@@ -22,7 +22,7 @@ export const certificados = [
     url: "https://cursos.alura.com.br/certificate/guilhermebdias55/logica-programacao-mergulhe-programacao-javascript"
   },
   {
-    titulo: "Certificado de Fundamentos de Redes de Computadores",
+    titulo: "Certificado de Ciber Segurança V2",
     url: "https://www.credly.com/go/yVievaxg"
   },
 ];
