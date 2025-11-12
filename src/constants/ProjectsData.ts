@@ -3,10 +3,11 @@ export const ProjectsData = [
     title: "Patrimônio-Website",
     description: "Web tool for asset control and organization, utilizing QR Code and NFC scanning technology.",
     completeDescription: "This project is a web-based asset management and control system developed to support the administrative and logistical operations of the Public Defender’s Office of the Federal District (DPDF). \n\nThe platform enables efficient tracking, organization, and monitoring of institutional assets through the use of QR Code and NFC technologies, allowing users to quickly identify and retrieve asset information by scanning tags directly from the interface ",
+    myContribuition: "In this project, I was responsible for developing the front-end using React.js and Tailwind.css. I implemented key features such as asset registration, search functionality, and real-time status updates. Additionally, I collaborated closely with the back-end team to ensure seamless integration with the database and API services.",
     image: "../../projetos/patri.svg",
     image_2: "../../projetos/patri_2.svg",
     imageSize: "w-[50%]",
-    imageSizeModal: "w-[35%] md:w-[45%]",
+    imageSizeModal: "w-[35%] md:w-[30%]",
     techs: [
       { id: 1, image: "icones/SQLServer_Logo.svg" },
       { id: 2, image: "icones/Next_Logo.svg" },
