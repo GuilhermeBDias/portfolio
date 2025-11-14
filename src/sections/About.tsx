@@ -42,7 +42,7 @@ function About() {
           titleClass="text-xl md:text-2xl p-4"
           viewport={{ once: true, amount: 0.7 }}
         >
-          <div className="absolute top-[30%] md:top-[20%] left-1/2 -translate-x-1/2 -z-10 w-[600px] md:w-[900px] h-[800px]  invert rounded-full overflow-hidden ">
+          <div className="absolute top-[30%] md:top-[20%] left-1/2 -translate-x-1/2 -z-10 w-[600px] md:w-[900px] h-[850px] invert rounded-full overflow-hidden ">
             <img
               src="../../map.svg"
               alt="World Map"

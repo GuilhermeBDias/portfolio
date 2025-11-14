@@ -36,7 +36,7 @@ function Projects() {
   }, []);
 
   return (
-    <section id="projects" className="section-class flex-col relative mb-10">
+    <section id="projects" className="section-class flex-col relative mb-10 ">
       <motion.p
         variants={itemVariants}
         initial="hidden"

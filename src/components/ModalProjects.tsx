@@ -2,6 +2,8 @@ import { AnimatePresence } from "motion/react";
 import { motion } from "framer-motion";
 import type { ModalProjectsProps } from "../utils/Types";
 import { RiCloseCircleLine } from "react-icons/ri";
+import { useState } from "react";
+import { IoIosArrowForward } from "react-icons/io";
 
 const modalVariants = {
   hidden: { opacity: 0, scale: 0.95, y: -30 },
@@ -16,11 +18,13 @@ export const ModalProjects = ({
 }: ModalProjectsProps) => {
   if (!project) return null;
 
+  const [contribution, setContribution] = useState(false);
+
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 bg-black/70 z-20 flex justify-center items-center px-4"
+          className="fixed inset-0 backdrop-blur-xs bg-black/70 z-20 flex justify-center items-center px-4"
           onClick={onClose}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -29,7 +33,7 @@ export const ModalProjects = ({
         >
           <motion.div
             onClick={(e) => e.stopPropagation()}
-            className="flex flex-col justify-center items-center relative bg-[#13162D] rounded-2xl p-8 max-w-lg w-[90%] min-h-[40%] text-white shadow-lg"
+            className="flex flex-col justify-center items-center relative bg-[#13162D] rounded-2xl p-8 max-w-lg w-[90%] h-[80%] text-white shadow-lg"
             variants={modalVariants}
             initial="hidden"
             animate="visible"
@@ -56,16 +60,16 @@ export const ModalProjects = ({
               </div>
             )}
 
-            <p className="text-sm md:text-base text-gray-300 mb-6 whitespace-pre-line">
-              {project.completeDescription}
-            </p>
+            {contribution ? (
+              <p className="h-[40%] overflow-auto p-2 mb-2 text-sm md:text-base text-gray-300 whitespace-pre-line text-justify">{project.myContribuition}</p>
+            ) : (<p className="h-[40%] overflow-auto p-2 mb-2 text-sm md:text-base text-gray-300 whitespace-pre-line text-justify">{project.completeDescription}</p>)} 
 
             {project.techs && project.techs.length > 0 && (
-              <div className="flex gap-2 flex-wrap mb-6">
+              <div className="flex gap-2 flex-wrap justify-center mb-6">
                 {project.techs.map((tech) => (
                   <div
                     key={tech.id}
-                    className="w-10 h-10 flex items-center justify-center rounded-full bg-[#0C0E23] border border-[#363749]"
+                    className="w-12 h-12 flex items-center justify-center rounded-full bg-[#0C0E23] border border-[#363749]"
                   >
                     <img
                       src={`../../${tech.image}`}
@@ -76,6 +80,9 @@ export const ModalProjects = ({
                 ))}
               </div>
             )}
+            <button onClick={() => setContribution(!contribution)} className="flex justify-center items-center absolute bottom-4 right-4 w-10 h-10 border-1 border-amber-200">
+              <IoIosArrowForward size={24} />
+            </button>
           </motion.div>
         </motion.div>
       )}

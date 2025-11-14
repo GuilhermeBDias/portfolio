@@ -57,7 +57,7 @@ export const Card = ({
             }}
             transition={{ duration: 0.3 }}
             key={tech.id}
-            className="w-[40px] h-[40px] md:w-[45px] md:h-[45px] justify-center items-center flex rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-r from-[#04071D] to-[#0C0E23] border-2 border-[#363749] -mr-2 hover:scale-105 transition-[scale] duration-300"
+            className="w-[40px] h-[40px] md:w-[50px] md:h-[50px] justify-center items-center flex rounded-full overflow-hidden flex-shrink-0 bg-gradient-to-r from-[#04071D] to-[#0C0E23] border-2 border-[#363749] -mr-2 hover:scale-105 transition-[scale] duration-300"
           >
             <img
               src={`../../${tech.image}`}
