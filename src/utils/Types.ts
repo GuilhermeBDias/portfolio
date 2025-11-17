@@ -101,7 +101,7 @@ export interface ModalProjectsProps {
     title?: string;
     description?: string;
     completeDescription?: string
-    myContribuition?: string;
+    myContribution?: string;
     image?: string;
     image_2?: string;
     imageSize?: string;

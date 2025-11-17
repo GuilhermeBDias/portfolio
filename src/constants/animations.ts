@@ -16,3 +16,23 @@ export const itemVariants = {
     transition: { duration: 1.0 },
   },
 };
+
+export const textSlide = {
+  enterRight: { opacity: 0, x: 60 },
+  enterLeft: { opacity: 0, x: -60 },
+  center: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 0.35 }
+  },
+  exitRight: {
+    opacity: 0,
+    x: 60,
+    transition: { duration: 0.25 }
+  },
+  exitLeft: {
+    opacity: 0,
+    x: -60,
+    transition: { duration: 0.25 }
+  }
+};
