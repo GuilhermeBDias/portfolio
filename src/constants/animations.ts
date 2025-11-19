@@ -23,16 +23,36 @@ export const textSlide = {
   center: {
     opacity: 1,
     x: 0,
-    transition: { duration: 0.35 }
+    transition: { duration: 0.55, delay: 0.1 }
   },
   exitRight: {
     opacity: 0,
     x: 60,
-    transition: { duration: 0.25 }
+    transition: { duration: 0.45 }
   },
   exitLeft: {
     opacity: 0,
     x: -60,
-    transition: { duration: 0.25 }
+    transition: { duration: 0.45 }
   }
+};
+
+export const carouselVariants = {
+  enter: (direction : number) => ({
+    opacity: 0,
+    x: direction > 0 ? 80 : -80,
+    position: "absolute",
+  }),
+  center: {
+    opacity: 1,
+    x: 0,
+    position: "static",
+    transition: { duration: 0.45 },
+  },
+  exit: (direction: number) => ({
+    opacity: 0,
+    x: direction > 0 ? -80 : 80,
+    position: "absolute",
+    transition: { duration: 0.45 },
+  }),
 };

@@ -1,7 +1,7 @@
 import type { IconType } from "react-icons";
 import { FaLinkedin, FaGithub, FaWhatsapp } from "react-icons/fa";
 
-export const testimonials = [
+export const skills = [
   {
     title: "React",
   },

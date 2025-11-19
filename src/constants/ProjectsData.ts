@@ -1,5 +1,6 @@
 export const ProjectsData = [
   {
+    id: 1,
     title: "Patrimônio-Website",
     description: "Web tool for asset control and organization, utilizing QR Code and NFC scanning technology.",
     completeDescription: "This project is a web-based asset management and control system developed to support the administrative and logistical operations of the Public Defender’s Office of the Federal District (DPDF). \n\nThe platform enables efficient tracking, organization, and monitoring of institutional assets through the use of QR Code and NFC technologies, allowing users to quickly identify and retrieve asset information by scanning tags directly from the interface.",
@@ -19,9 +20,11 @@ export const ProjectsData = [
     ]
   },
   {
+    id: 2,
     title: "Eclipse",
     description: "Data collection and management platform designed to streamline and optimize internal processes within the Public Defender’s Office of the Federal District (DPDF).",
     completeDescription: "This project is a data collection and workflow management platform designed to support and optimize internal evaluation processes within the Public Defender’s Office of the Federal District (DPDF). \n\n The system specifically assists in the probationary assessment of public defenders, providing a structured, transparent, and automated environment for evaluating their professional performance.",
+    myContribution: "In Construction",
     image: "../../projetos/Eclipse.svg",
     image_2: "../../projetos/Eclipse_2.svg",
     imageSize: "w-[50%]",
@@ -37,9 +40,11 @@ export const ProjectsData = [
     ],
   },
   {
+    id: 3,
     title: "Vroomly (In Construction)",
     description: " In Construction",
     completeDescription: "In Construction",
+    myContribution: "In Construction",
     image: "../../projetos/Vroomly.png",
     image_2: "",
     imageSize: "w-[80%]",
@@ -55,4 +60,5 @@ export const ProjectsData = [
       { id: 8, image: "icones/Motion_Logo.svg" },
     ]
   },
+  
 ]

@@ -44,7 +44,7 @@ export const NavBar = () => {
         initial ={{ opacity: 1, y: -100}}
         animate={{ y: visible ? 0 : -100, opacity: visible ? 1 : 0}}
         transition={{ duration: 0.5, }}
-        className="flex fixed top-0 w-[85%] mt-10 max-w-[600px] h-[60px] justify-center items-center navbar-class border-1 border-[#272A3C] z-100"
+        className="flex fixed top-0 w-[85%] mt-10 max-w-[600px] h-[60px] justify-center items-center navbar-class border-1 border-[#272A3C] z-40"
       >
         <ul className="flex gap-4 md:gap-8 font-semibold">
           {links.map((link) => (

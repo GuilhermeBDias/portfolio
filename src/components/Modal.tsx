@@ -1,8 +1,9 @@
 import { AnimatePresence, motion } from "motion/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import { MdOutlineEmail } from "react-icons/md";
 import { BackgroundGradient } from "./BackGroundGradient";
+import { RiCloseCircleLine } from "react-icons/ri";
 
 interface ModalProps {
   isOpen: boolean;
@@ -52,6 +53,18 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
     }
   };
 
+  useEffect(() => {
+      if (isOpen) {
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = "auto";
+      }
+  
+      return () => {
+        document.body.style.overflow = "auto";
+      };
+    }, [isOpen]);
+
   return (
     <AnimatePresence>
       {isOpen && (
@@ -92,9 +105,9 @@ export const Modal = ({ isOpen, onClose }: ModalProps) => {
                   <button
                     type="button"
                     onClick={onClose}
-                    className="cursor-pointer text-white text-2xl font-semibold hover:scale-110 transition-[scale] "
+                    className="cursor-pointer text-gray-400 hover:text-white/80 transition-colors "
                   >
-                    x
+                    <RiCloseCircleLine size={30}/>
                   </button>
                 </div>
                 <div className="flex flex-col gap-2 w-full h-full items-center">

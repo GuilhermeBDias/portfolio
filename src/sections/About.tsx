@@ -3,7 +3,7 @@ import { BentoGrid, BentoGridItem } from "../components/BentoGrid";
 import { GridBackground } from "../components/GridBackGround";
 import { InfiniteMovingCards } from "../components/InfinityCards";
 import { MiniCard } from "../components/MiniCard";
-import { testimonials } from "../constants";
+import { skills } from "../constants";
 import { TbCopy, TbCopyCheck } from "react-icons/tb";
 import { BorderAnimation } from "../components/BorderAnimation";
 
@@ -63,8 +63,8 @@ function About() {
         >
           <div className="absolute inset-0 backGround-gradient-1" />
           <div className="flex w-full justify-end gap-2 pr-2 md:pr-4">
-            <InfiniteMovingCards items={testimonials} />
-            <InfiniteMovingCards items={testimonials} direction="bottom" />
+            <InfiniteMovingCards items={skills} />
+            <InfiniteMovingCards items={skills} direction="bottom" />
           </div>
           <div className="absolute w-full h-full inset-0 bg-gradient-to-r from-transparent to-[#0C0E23]" />
         </BentoGridItem>

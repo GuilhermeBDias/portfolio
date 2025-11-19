@@ -29,14 +29,14 @@ export const ModalProjects = ({
 
     return () => {
       document.body.style.overflow = "auto";
-    }
+    };
   }, [isOpen]);
 
   return (
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 backdrop-blur-xs bg-black/70 z-20 flex justify-center items-center px-4 overscroll-none"
+          className="fixed inset-0 backdrop-blur-xs bg-black/70 z-50 flex justify-center items-center px-4 overscroll-none"
           onClick={onClose}
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -52,9 +52,11 @@ export const ModalProjects = ({
             exit="exit"
             transition={{ duration: 0.5 }}
           >
-            <h2 className="text-2xl font-bold mb-4">{project.title}</h2>
+            <h2 className="text-xl md:text-2xl font-bold mb-4">
+              {project.title}
+            </h2>
             <button
-              className="absolute top-4 right-4 text-gray-400 hover:text-white cursor-pointer"
+              className="absolute top-4 right-4 text-gray-400 hover:text-white/80 transition-colors cursor-pointer"
               onClick={onClose}
             >
               <RiCloseCircleLine size={30} />
@@ -74,16 +76,24 @@ export const ModalProjects = ({
                 />
               </div>
             )}
-            <div className="relative h-[40%] w-full rounded-2xl overflow-hidden border-2 border-[#363749] mb-6">
-              <div className="flex w-full font-bold justify-evenly border-b-2 border-[#363749]">
+            <div className="relative h-[40%] w-full rounded-2xl overflow-hidden border-2 border-[#363749] pb-8">
+              <div className="flex w-full font-bold justify-evenly border-b-2 border-[#363749] ">
                 <button
-                  className={`w-full border-r-2 border-[#363749] p-1 ${!contribution ? "bg-[#13162D] text-secondary" : "bg-[#000000]/50 text-zinc-400 cursor-pointer"}`}
+                  className={`w-full border-r-2 border-[#363749] p-1 ${
+                    !contribution
+                      ? "bg-[#13162D] text-secondary"
+                      : "bg-[#000000]/50 text-zinc-400 cursor-pointer"
+                  }`}
                   onClick={() => setContribution(false)}
                 >
                   Details
                 </button>
                 <button
-                  className={`w-full border-[#363749] p-1  ${contribution ? "bg-[#13162D] text-secondary" : "bg-[#000000]/50 text-zinc-400 cursor-pointer"}`}
+                  className={`w-full border-[#363749] p-1  ${
+                    contribution
+                      ? "bg-[#13162D] text-secondary"
+                      : "bg-[#000000]/50 text-zinc-400 cursor-pointer"
+                  }`}
                   onClick={() => setContribution(true)}
                 >
                   Contribution
@@ -102,7 +112,9 @@ export const ModalProjects = ({
                       exit="exitRight"
                       className="z-10"
                     >
-                      <p className="pt-4 ">{project.myContribution}</p>
+                      <p className="pt-2 text-base md:text-lg ">
+                        {project.myContribution}
+                      </p>
                     </motion.div>
                   ) : (
                     <motion.div
@@ -113,14 +125,14 @@ export const ModalProjects = ({
                       exit="exitLeft"
                       className="z-10"
                     >
-                      <p className="pt-4">{project.completeDescription}</p>
+                      <p className="pt-2">{project.completeDescription}</p>
                     </motion.div>
                   )}
                 </AnimatePresence>
               </div>
             </div>
             {project.techs && project.techs.length > 0 && (
-              <div className="flex gap-2 flex-wrap justify-center mb-6">
+              <div className="flex gap-2 flex-wrap justify-center mb-6 mt-4">
                 {project.techs.map((tech) => (
                   <div
                     key={tech.id}
