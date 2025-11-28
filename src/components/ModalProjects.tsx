@@ -136,13 +136,15 @@ export const ModalProjects = ({
                 {project.techs.map((tech) => (
                   <div
                     key={tech.id}
-                    className="md:w-12 md:h-12 w-10 h-10  flex items-center justify-center rounded-full bg-[#0C0E23] border border-[#363749]"
+                    className="md:w-12 md:h-12 w-10 h-10 flex items-center justify-center rounded-full relative group bg-[#0C0E23] border border-[#363749]"
                   >
                     <img
                       src={`../../${tech.image}`}
                       alt=""
                       className="p-2 object-contain"
                     />
+
+                    <span className="absolute z-20 -top-12 left-1/2 -translate-x-1/2 mt-2 whitespace-nowrap rounded-xl color-gradient border-2 border-[#363749] py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity">{tech.nome}</span>
                   </div>
                 ))}
               </div>
